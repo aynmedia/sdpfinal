@@ -1,9 +1,10 @@
 /** @format */
-
+'use client';
 import React from 'react';
 import Image from 'next/image';
-import sliderbg1 from '@/../public/images/sliderbg1.jpeg';
+import { motion } from 'framer-motion';
 import Button from '../ui/button/button';
+import sliderbg1 from '@/../public/images/sliderbg1.jpeg';
 const Herosection = () => {
   return (
     <div className='relative w-full h-[90vh] overflow-hidden'>
@@ -17,24 +18,52 @@ const Herosection = () => {
 
       {/* Overlay Structure */}
       <div className='absolute inset-0 grid md:grid-cols-3 gap-0'>
-        {/* Left colored panel */}
-        <div className='col-span-1 bg-primary'></div>
-        <div className='col-span-2'></div>
+        {/* Left colored panel with slide animation */}
+        <motion.div
+          className='col-span-1 bg-primary'
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        />
+        <div className='col-span-2' />
       </div>
 
       {/* Text Container - Positioned on the left */}
-      <div className='absolute inset-y-0 left-0 w-full md:w-1/2 flex flex-col justify-center md:pl-24 px-6 gap-6'>
-        <h1 className='text-white text-4xl md:text-4xl font-bold'>
+      <motion.div
+        className='absolute inset-y-0 left-0 w-full md:w-1/2 flex flex-col justify-center md:pl-24 px-6 gap-6'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}>
+        <motion.h1
+          className='text-white text-4xl md:text-4xl font-bold'
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}>
           Efficient Pneumatic Solutions for Every Industry
-        </h1>
-        <p className='text-white text-md'>
+        </motion.h1>
+
+        <motion.p
+          className='text-white text-md'
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.7 }}>
           we deliver cutting-edge pneumatic systems designed to enhance
           productivity and reliability. From innovative products to expert
-          support, we’re committed to powering your operations with precision
+          support, we're committed to powering your operations with precision
           and efficiency. Let us help you achieve optimal performance today.
-        </p>
-        <Button color='white' text='Learn More' link='https://www.google.com' />
-      </div>
+        </motion.p>
+
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.9 }}>
+          <Button
+            color='white'
+            text='Learn More'
+            link='https://www.google.com'
+          />
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

@@ -110,7 +110,7 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
           className='mt-16 pt-8 border-t border-gray-800 text-center text-gray-400'>
-          <p>© {new Date().getFullYear()} SDP Neumatics, All Rights Reserved</p>
+          <p>© {new Date().getFullYear()} SD Pneumatics, All Rights Reserved</p>
         </motion.div>
       </div>
     </footer>

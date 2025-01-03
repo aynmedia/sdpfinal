@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { CircleArrowRight, ChevronDown } from 'lucide-react';
 
 // Import images (assuming these are already imported in your project)
-import sliderbg1 from '@/../public/images/sliderbg1.jpg';
+import sliderbg1 from '@/../public/images/sliderbg1.jpeg';
 import sliderbg2 from '@/../public/images/sliderbg2.jpg';
 import anesta from '@/../public/images/anesta.png';
 import kobel from '@/../public/images/kobel.png';
@@ -82,7 +82,7 @@ const HomeSlider = () => {
           backgroundSize: 'cover',
         }}>
         {/* Optional Gradient Overlay */}
-        <div className='absolute inset-0 bg-gradient-to-b from-gray-100/60 to-gray-100/60'></div>
+        {/* <div className='absolute inset-0 bg-gradient-to-b from-gray-100/60 to-gray-100/60'></div> */}
       </div>
 
       {/* Slides Container */}
@@ -93,56 +93,13 @@ const HomeSlider = () => {
           animate='enter'
           exit='exit'
           variants={slideVariants}
-          className='relative flex items-center justify-center h-full px-4 md:px-8'>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl h-full'>
-            {/* Text Content */}
-            <div className='flex flex-col justify-center text-primary text-left px-2 md:px-4 order-2 md:order-1'>
-              {slides[currentSlide].logo && (
-                <Image
-                  src={slides[currentSlide].logo}
-                  alt='Logo'
-                  width={150}
-                  height={100}
-                  className='my-6 md:my-12 self-start'
-                />
-              )}
-              <motion.h1
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.7 }}
-                className='text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance'>
-                {slides[currentSlide].title}
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.7 }}
-                className='text-xs md:text-base lg:text-lg max-w-lg text-black/60 text-pretty'>
-                {slides[currentSlide].description}
-              </motion.p>
-              <Link
-                href='/products'
-                className='mt-4 md:mt-8 cursor-pointer text-sm md:text-lg font-semibold items-center text-center flex text-black/60 hover:text-black transition-colors duration-300'>
-                Explore our products{' '}
-                <CircleArrowRight size={24} className='ml-2' />
-              </Link>
-            </div>
-
-            {/* Image Content */}
-            <div className='relative w-full h-full flex items-center justify-center order-1 md:order-2'>
-              <motion.div
-                className='w-full h-full max-w-sm md:max-w-none flex justify-center items-center'
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.4, duration: 0.8 }}>
-                <Image
-                  src={slides[currentSlide].image}
-                  alt='Slide Image'
-                  width={600}
-                  height={600}
-                  className='object-contain max-h-full h-full w-auto'
-                />
-              </motion.div>
+          className='relative flex items-center justify-center h-full'>
+          <div className='grid grid-cols-1 md:grid-cols-2 w-full  h-full '>
+            <div className='grid grid-cols-1 md:grid-cols-3 w-full  h-full '>
+              <div className='col-span-1 md:col-span-1 w-full h-full bg-primary'>
+                tailored for your business
+              </div>{' '}
+              <div className='col-span-1 md:col-span-2 w-full h-full'></div>
             </div>
           </div>
         </motion.div>

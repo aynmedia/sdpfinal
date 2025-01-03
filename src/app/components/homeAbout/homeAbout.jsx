@@ -58,7 +58,7 @@ const HomeAbout = () => {
         <motion.div className='w-full' variants={scaleIn}>
           <iframe
             width='100%'
-            height='315'
+            height='415'
             src='https://www.youtube.com/embed/zODMDux4Loc?autoplay=1&mute=1&loop=0'
             title='YouTube video player'
             frameBorder='0'

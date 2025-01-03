@@ -70,7 +70,7 @@ const HomeAbout = () => {
       </motion.div>
 
       <motion.div
-        className='flex flex-col justify-center items-center px-4 md:px-12 py-12 text-white gap-6'
+        className='flex flex-col justify-center items-center px-4 md:px-12 py-12 text-primary gap-6 bg-white'
         initial='hidden'
         whileInView='visible'
         viewport={{ once: true, margin: '-100px' }}
@@ -89,7 +89,7 @@ const HomeAbout = () => {
           {heroStats.map((stat, index) => (
             <motion.div key={index} className='text-left' variants={fadeInUp}>
               <motion.span
-                className='text-3xl md:text-4xl font-bold block text-white'
+                className='text-3xl md:text-4xl font-bold block text-primary'
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}>
@@ -100,7 +100,7 @@ const HomeAbout = () => {
           ))}
         </motion.div>
 
-        <motion.h1 className='text-white text-2xl mt-12' variants={fadeInUp}>
+        <motion.h1 className='text-primary text-2xl mt-12' variants={fadeInUp}>
           Authorized dealer of
         </motion.h1>
 

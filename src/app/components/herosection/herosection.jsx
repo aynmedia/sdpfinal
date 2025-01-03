@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Button from '../ui/button/button';
 import sliderbg1 from '@/../public/images/sliderbg1.jpeg';
+import solar from '@/../public/images/presence/SDP_Solar_Industry.png';
 const Herosection = () => {
   return (
     <div className='relative w-full h-[90vh] overflow-hidden'>
@@ -15,7 +16,7 @@ const Herosection = () => {
         fill
         className='object-cover'
       />
-
+      <div className='absolute bg-black/20 inset-0 top-0'></div>
       {/* Overlay Structure */}
       <div className='absolute inset-0 grid md:grid-cols-3 gap-0'>
         {/* Left colored panel with slide animation */}

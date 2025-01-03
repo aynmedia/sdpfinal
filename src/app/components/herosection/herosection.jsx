@@ -21,7 +21,7 @@ const Herosection = () => {
       <div className='absolute inset-0 grid md:grid-cols-3 gap-0'>
         {/* Left colored panel with slide animation */}
         <motion.div
-          className='col-span-1 bg-primary'
+          className='col-span-1 bg-primary/90'
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}

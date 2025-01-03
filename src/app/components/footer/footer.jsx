@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Twitter, Facebook, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 import logo from '@/../public/images/logo.png';
+import map from '@/../public/images/map.png';
 const Footer = () => {
   const fadeInUp = {
     initial: { y: 60, opacity: 0 },
@@ -94,12 +95,14 @@ const Footer = () => {
             initial='initial'
             whileInView='animate'
             viewport={{ once: true }}
-            variants={fadeInUp}>
+            variants={fadeInUp}
+            className='gap-6'>
             <h3 className='text-xl font-semibold mb-6'>Offices</h3>
-            <p className='text-gray-300'>
+            <p className='text-gray-300 mb-4'>
               Join us in driving the future of pneumatics with cutting-edge
               technology and a customer-first approach.
             </p>
+            <Image src={map} alt='Logo' width={400} height={400} />
           </motion.div>
         </div>
 

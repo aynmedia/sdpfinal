@@ -4,8 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Button from '../ui/button/button';
-import sliderbg1 from '@/../public/images/sliderbg1.jpeg';
-import solar from '@/../public/images/presence/SDP_Solar_Industry.png';
+import sliderbg1 from '@/../public/images/bghome.jpg';
+
 const Herosection = () => {
   return (
     <div className='relative w-full h-[90vh] overflow-hidden'>

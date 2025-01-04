@@ -47,7 +47,7 @@ const Navbar = () => {
     visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
   };
 
-  const textColorClass = isScrolled ? 'text-white' : 'text-black';
+  const textColorClass = isScrolled ? 'text-white' : 'text-white';
 
   const renderMenuItem = (item, isMobile = false) => (
     <Link href={item.path} key={item.path}>

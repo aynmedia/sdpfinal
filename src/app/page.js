@@ -8,6 +8,7 @@ import { Leading } from './components/leading/leading';
 import Presence from './components/presence/presence';
 import LatestPostsWidget from './components/recentblogs/reacentblogs';
 import Herosection from './components/herosection/herosection';
+import Services from './components/services/services';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <HomeAbout />
       <HomeProducts />
       <Presence />
+      <Services />
       <LatestPostsWidget />
     </>
   );

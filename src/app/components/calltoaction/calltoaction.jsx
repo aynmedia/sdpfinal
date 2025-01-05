@@ -15,8 +15,8 @@ const CardContent = ({ title, description, delay }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay }}>
-    <h1 className='text-xl md:text-2xl font-bold uppercase'>{title}</h1>
-    <p className='text-sm md:text-base'>{description}</p>
+    <h1 className='text-xl md:text-2xl font-bold capitalize'>{title}</h1>
+    <p className='text-sm md:text-md'>{description}</p>
     <Button color='black' text='Request' link='https://www.google.com' />
   </motion.div>
 );

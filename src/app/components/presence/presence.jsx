@@ -108,7 +108,7 @@ const Presence = () => {
       <div className='max-w-7xl mx-auto text-center my-6'>
         {' '}
         <h1 className='text-2xl font-semibold mt-2'>Industrial Applications</h1>
-        <h2 className='text-md  max-w-3xl mx-auto my-2'>
+        <h2 className='text-md  max-w-4xl mx-auto my-2'>
           With a strong foundation in global expertise, we provide trusted
           solutions that cater to diverse industries, consistently delivering
           exceptional performance and groundbreaking innovation worldwide.

@@ -1,25 +1,21 @@
 /** @format */
 
-import { Geist, Geist_Mono, Poppins } from 'next/font/google';
+import { Oswald, Poppins } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
 
 const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-poppins',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
+const oswald = Oswald({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-oswald',
+  weight: ['200', '300', '400', '500', '600', '700'],
 });
 
 export const metadata = {
@@ -30,8 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}>
+      <body className={` ${poppins.variable} ${oswald.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />

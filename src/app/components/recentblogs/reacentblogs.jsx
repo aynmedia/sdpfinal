@@ -129,7 +129,7 @@ export default function LatestPostsWidget() {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8'>
           {posts.map((post) => (
             <Link
-              href={`/posts/${post.slug}`}
+              href={`/blogs/${post.slug}`}
               key={post.id}
               className='block hover:scale-105 transition-transform duration-300'>
               <div

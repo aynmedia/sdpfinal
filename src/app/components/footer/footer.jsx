@@ -78,12 +78,12 @@ const Footer = () => {
             <div className='space-y-4 text-gray-300'>
               <p>456, 4th Main Rd, Manjunath Nagar, Basaveshwar Nagar,</p>
               <p>Bengaluru, Karnataka 560010</p>
-              <p className='text-yellow-400'>+91 99865 23331</p>
+              <p className='text-green-600'>+91 99865 23331</p>
               <p>Mon-Sat, 9:00am-8:00pm</p>
               <p>
                 <Link
                   href='mailto:care@sdpneumatics.in'
-                  className='text-yellow-400 hover:text-yellow-300'>
+                  className='text-green-600 hover:text-yellow-300'>
                   care@sdpneumatics.in
                 </Link>
               </p>

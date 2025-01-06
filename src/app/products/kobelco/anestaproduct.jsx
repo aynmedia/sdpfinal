@@ -19,8 +19,8 @@ const AnestIwataProducts = () => {
   const [totalProducts, setTotalProducts] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [sortBy, setSortBy] = useState('date-asc');
-  const productsPerPage = 9;
-  const ANEST_IWATA_CATEGORY_ID = 1;
+  const productsPerPage = 12;
+  const ANEST_IWATA_CATEGORY_ID = 3;
 
   // Fetch Categories
   useEffect(() => {
@@ -140,10 +140,10 @@ const AnestIwataProducts = () => {
       {/* Header */}
       <div className='mb-8 text-center'>
         <h2 className='text-2xl font-bold text-gray-900'>
-          Anesta Iwata Products ({totalProducts})
+          Kobelco Products ({totalProducts})
         </h2>
         <p className='text-gray-600 mt-2'>
-          Browse our collection of high-quality Anest Iwata products
+          Browse our collection of high-quality Kobelco products
         </p>
       </div>
 
@@ -213,7 +213,7 @@ const AnestIwataProducts = () => {
                     height={600}
                     src={post.featured_media}
                     alt={post.title?.rendered || 'Product Image'}
-                    className='w-full h-48 object-cover'
+                    className='w-full h-48 object-contain'
                   />
                 </div>
 

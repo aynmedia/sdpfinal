@@ -17,7 +17,7 @@ const menuItems = [
       {
         title: 'Main Products',
         links: [
-          { label: 'Anesta Iwata', href: '/products/anest-iwata' },
+          { label: 'Anest Iwata', href: '/products/anesta' },
           { label: 'Kobelco', href: '/products/kobelco' },
           { label: 'Oxygen Generators', href: '/products/oxygen-generators' },
           {
@@ -29,8 +29,8 @@ const menuItems = [
       },
     ],
   },
-  { path: '/services', label: 'Services' },
   { path: '/about', label: 'About' },
+  { path: '/blogs', label: 'Blogs' },
   { path: '/contact', label: 'Contact' },
 ];
 

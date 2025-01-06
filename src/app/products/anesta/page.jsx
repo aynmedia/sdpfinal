@@ -6,19 +6,57 @@ import anesta from '@/../public/images/anesta.jpg';
 import { Dot } from 'lucide-react';
 import anestabg from '@/../public/images/anestabg.jpg';
 import AnestIwataProducts from './anestaproduct';
+import anestalogo from '@/../public/images/anestlogo.svg';
+import Button from '@/app/components/ui/button/button';
+import Explore from '@/app/components/explore/explore';
 const Anesta = () => {
   return (
     <div>
-      <div className='flex flex-col justify-center items-center min-h-screen relative'>
-        <Image
-          src={anesta}
-          alt='Anesta Iwata'
-          width={600}
-          height={600}
-          className='absolute top-0 left-0 w-full h-full object-cover'
-        />
-        <div className='absolute top-0 left-0 w-full h-full bg-green/60'></div>
+      <div className='grid grid-cols-1 md:grid-cols-2 min-h-screen relative'>
+        {' '}
+        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#051D3F] via-transparent to-[#051D3F] z-10 pointer-events-none'></div>
+        <div className='relative order-last md:order-first flex flex-col justify-center bg-[#051D3F] text-white'>
+          <div className='absolute  top-0 left-0 w-full h-full bg-gradient-to-b from-[#051D3F] via-transparent to-[#051D3F] pointer-events-none'></div>
+          <div className='md:mx-24 mx-4 flex gap-6 flex-col z-10'>
+            <div className='p-4 bg-white w-fit rounded-sm'>
+              <Image
+                src={anestalogo}
+                alt='Anesta Iwata'
+                width={200}
+                height={200}
+              />
+            </div>
+            <p className='text-white text-4xl font-bold'>Anesta Iwata</p>
+            <p className='text-white text-md font-normal'>
+              Innovation Meets Excellence. Explore cutting-edge solutions in air
+              compression, vacuum technology, and coating systems crafted to
+              optimize productivity across industries. Trust Anest Iwata for
+              precision-driven results.
+            </p>
+            <Button
+              color='white'
+              text='Contact Us'
+              link='https://www.google.com'
+            />
+          </div>
+        </div>
+        <div className='order-first md:order-last relative w-full h-full'>
+          <div className='relative w-full h-full'>
+            {/* Gradient Effect */}
+            <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#051D3F] via-transparent to-[#051D3F] z-10 pointer-events-none'></div>
+
+            {/* Image */}
+            <Image
+              src={anesta}
+              alt='Anesta Iwata'
+              layout='fill'
+              objectFit='cover'
+              className='w-full h-full'
+            />
+          </div>
+        </div>
       </div>
+      <Explore />
       <div className='max-w-7xl mx-auto pb-2 pt-12'>
         <h1 className='text-4xl font-semibold mb-4 px-2'>Highlights</h1>
       </div>

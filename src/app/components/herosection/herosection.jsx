@@ -10,12 +10,13 @@ import purplebg from '@/../public/images/purplebg.jpg';
 const Herosection = () => {
   return (
     <div className='relative w-full h-[90vh] overflow-hidden'>
+      <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#111016] via-transparent to-[#111016] z-10 pointer-events-none'></div>
       {/* Background Image */}
 
       {/* <div className='absolute inset-0 top-0 bg-gradient-to-b from-black/70 to-transparent'></div> */}
 
       {/* Overlay Structure - Modified to 2 columns */}
-      <div className='absolute inset-0 grid md:grid-cols-3 gap-0'>
+      <div className='absolute inset-0 grid md:grid-cols-2 gap-0'>
         {/* Left colored panel */}
         <motion.div
           className='col-span-1 bg-[#111016]'
@@ -25,7 +26,7 @@ const Herosection = () => {
         />
         {/* Right colored panel */}
         <motion.div
-          className='col-span-2 bg-[#111016]/90'
+          className='col-span-1 bg-[#111016]/90'
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
@@ -33,7 +34,7 @@ const Herosection = () => {
       </div>
 
       {/* Content Container - Split into two sections */}
-      <div className='absolute inset-0 grid md:grid-cols-3 gap-4'>
+      <div className='absolute inset-0 grid md:grid-cols-2'>
         {/* Left Content */}
         <motion.div
           className='flex flex-col justify-center md:pl-24 px-6 gap-6 col-span-1'
@@ -71,7 +72,7 @@ const Herosection = () => {
 
         {/* Right Content */}
         <motion.div
-          className='flex flex-col justify-center gap-6 bg-white col-span-2 relative'
+          className='flex flex-col justify-center bg-white col-span-1 relative'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}>
@@ -82,6 +83,7 @@ const Herosection = () => {
             objectFit='cover'
             className='absolute top-0 left-0 w-full h-full'
           />
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#111016] via-transparent to-[#111016] z-10 pointer-events-none'></div>
         </motion.div>
       </div>
     </div>

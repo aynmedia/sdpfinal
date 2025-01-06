@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
 import logo from '@/../public/images/logo.png';
 import motor from '@/../public/images/motor.jpg';
+
 const menuItems = [
   { path: '/', label: 'Home' },
   {
@@ -71,6 +72,11 @@ const Navbar = () => {
     setMegaMenuTimer(timer);
   };
 
+  const handleSubMenuClick = () => {
+    setMegaMenuOpen(false);
+    setMenuOpen(false);
+  };
+
   const mobileMenuVariants = {
     hidden: { opacity: 0, x: '-100%' },
     visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
@@ -94,7 +100,7 @@ const Navbar = () => {
       <div className='max-w-7xl mx-auto grid grid-cols-5 gap-4 p-4'>
         <div className='space-y-1'>
           {menuItems[1].megaMenuContent[0].links.map((link, index) => (
-            <Link href={link.href} key={index}>
+            <Link href={link.href} key={index} onClick={handleSubMenuClick}>
               <span className='block px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors'>
                 <span className='text-base text-gray-900 dark:text-white hover:text-green-700 dark:hover:text-green-500'>
                   {link.label}
@@ -108,7 +114,7 @@ const Navbar = () => {
             <Image
               src={motor}
               alt='Featured Products'
-              className='w-full h-full object-cover '
+              className='w-full h-full object-cover'
             />
             <div className='absolute bottom-0 left-0 right-0 p-4 text-white'>
               <h3 className='text-xl font-bold mb-2'>Featured Products</h3>
@@ -145,7 +151,10 @@ const Navbar = () => {
           </div>
           <div className='pl-4'>
             {item.megaMenuContent[0].links.map((link) => (
-              <Link href={link.href} key={link.href}>
+              <Link
+                href={link.href}
+                key={link.href}
+                onClick={handleSubMenuClick}>
                 <span className='block px-3 py-1.5 text-sm hover:bg-green-700 rounded'>
                   {link.label}
                 </span>

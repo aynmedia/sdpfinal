@@ -1,61 +1,128 @@
 /** @format */
-
+'use client';
 import Image from 'next/image';
 import React from 'react';
 import anesta from '@/../public/images/anesta.jpg';
 import { Dot } from 'lucide-react';
+import kobel from '@/../public/images/kobel.png';
+
 import kobelcoscrew from '@/../public/images/kobelcoscrew.jpg';
 import AnestIwataProducts from './anestaproduct';
 import kobelcologo from '@/../public/images/kobelco.svg';
 import Button from '@/app/components/ui/button/button';
 import Explore from '@/app/components/explore/explore';
 import screw from '@/../public/images/screw.jpg';
+import { motion } from 'framer-motion';
+import sliderbg2 from '@/../public/images/sliderbg2.jpg';
+const fadeIn = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const slideIn = {
+  hidden: {
+    x: -50,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const scaleIn = {
+  hidden: {
+    scale: 0.8,
+    opacity: 0,
+  },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  },
+};
+
 const Kobelco = () => {
   return (
     <div>
-      <div className='grid grid-cols-1 md:grid-cols-2 min-h-screen relative'>
-        {' '}
-        {/* <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#051D3F] via-transparent to-[#051D3F] z-10 pointer-events-none'></div> */}
-        <div className='relative order-last md:order-last flex flex-col justify-center bg-primary text-white'>
-          {/* <div className='absolute  top-0 left-0 w-full h-full bg-gradient-to-b from-[#051D3F] via-transparent to-[#051D3F] pointer-events-none'></div> */}
-          <div className='md:mx-24 mx-4 flex gap-6 flex-col z-10'>
-            <div className='p-4 bg-primary w-fit rounded-sm'>
-              <Image
-                src={kobelcologo}
-                alt='Anesta Iwata'
-                width={200}
-                height={200}
-              />
-            </div>
-            <p className='text-white text-4xl font-bold'>Kobelco</p>
-            <p className='text-white text-md font-normal'>
-              KOBELCO COMPRESSORS, with over 100 years of history, is a leading
-              global provider of compressed air solutions from Japan. Committed
-              to innovation and quality, they deliver reliable and efficient
-              systems for various industries worldwide.
-            </p>
-            <Button
-              color='white'
-              text='Contact Us'
-              link='https://www.google.com'
-            />
-          </div>
-        </div>
-        <div className='order-first md:order-first relative w-full h-full'>
-          <div className='relative w-full h-full'>
-            {/* Gradient Effect */}
-            {/* <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary via-transparent to-primary z-10 pointer-events-none'></div> */}
+      <div className='absolute w-full h-screen'>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}>
+          <Image src={sliderbg2} alt='product bg' fill objectFit='cover' />
+          <div className='absolute inset-0 bg-gradient-to-b from-gray-100/50 to-gray-100/50'></div>
+        </motion.div>
+      </div>
 
-            {/* Image */}
+      <div className='grid grid-cols-2 min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 justify-center'>
+        <motion.div
+          className='absolute flex md:flex-row gap-5 justify-center items-center min-h-screen'
+          variants={staggerContainer}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, margin: '-100px' }}>
+          <motion.div
+            className='gap-6 flex flex-col w-full md:w-1/2'
+            variants={slideIn}>
             <Image
-              src={kobelcoscrew}
+              src={kobelcologo}
               alt='Anesta Iwata'
-              layout='fill'
-              objectFit='cover'
-              className='w-full h-full'
+              width={200}
+              height={200}
             />
-          </div>
-        </div>
+            <motion.h1 className='text-4xl font-bold' variants={fadeIn}>
+              Anesta Iwata
+            </motion.h1>
+            <motion.p className='text-black/60' variants={fadeIn}>
+              Innovation Meets Excellence. Explore cutting-edge solutions in air
+              compression, vacuum technology, and coating systems crafted to
+              optimize productivity across industries. Trust Anest Iwata for
+              precision-driven results.
+            </motion.p>
+            <motion.div variants={fadeIn}>
+              <Button
+                color='white'
+                text='Contact Us'
+                link='https://www.google.com'
+              />
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            className='gap-6 flex flex-col w-full md:w-1/2'
+            variants={scaleIn}>
+            <Image src={kobel} alt='Anesta Iwata' width={700} height={700} />
+          </motion.div>
+        </motion.div>
       </div>
       <Explore />
 

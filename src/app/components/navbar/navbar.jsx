@@ -87,7 +87,7 @@ const Navbar = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
   };
 
-  const textColorClass = isScrolled ? 'text-white' : 'text-white';
+  const textColorClass = isScrolled ? 'text-white' : 'text-primary';
 
   const renderMegaMenu = () => (
     <motion.div

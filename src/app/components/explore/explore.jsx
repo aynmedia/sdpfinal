@@ -27,7 +27,7 @@ const Explore = () => {
     },
   ];
   return (
-    <div className='bg-[#f4f4f4]'>
+    <div className='bg-primary text-white px-2 '>
       <div className='py-12 max-w-7xl mx-auto grid grid-cols-3 gap-6'>
         <h1 className='text-2xl font-normal mb-4 col-span-3'>
           Explore Further

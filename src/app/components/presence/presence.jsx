@@ -92,7 +92,7 @@ const ReviewCard = ({ image, category, username, body }) => {
         // dark styles
         'dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]'
       )}>
-      <Image src={image} width={700} height={700} alt='category' />
+      <Image src={image} width={400} height={400} alt='category' />
       <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4'>
         <figcaption className='text-md font-bold text-white'>
           {category}

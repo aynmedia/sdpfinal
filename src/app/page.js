@@ -14,8 +14,8 @@ export default function Home() {
   return (
     <>
       <Herosection />
-      {/* <Hero /> */}
-      <Leading /> <Calltoaction />
+      <Calltoaction />
+      <Leading />
       <HomeAbout />
       <HomeProducts />
       <Presence />

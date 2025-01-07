@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { CircleCheckBig } from 'lucide-react';
 import Button from '../ui/button/button';
 import abouthome from '@/../public/images/abouthome.png';
-import bg from '@/../public/images/bg.jpg';
+import bg from '@/../public/images/leading.jpg';
 
 const products = [
   'Air Compressors',
@@ -114,7 +114,7 @@ export function Leading() {
             initial={{ scale: 0.5, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className='relative w-full max-w-md'>
+            className='relative w-full max-w-md mt-12'>
             <Image
               src={abouthome}
               alt='Leading Pneumatics'

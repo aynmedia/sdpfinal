@@ -87,7 +87,7 @@ const Navbar = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
   };
 
-  const textColorClass = isScrolled ? 'text-white' : 'text-green-700';
+  const textColorClass = isScrolled ? 'text-white' : 'text-primary';
 
   const renderMegaMenu = () => (
     <motion.div
@@ -134,7 +134,7 @@ const Navbar = () => {
           onMouseEnter={handleMenuEnter}
           onMouseLeave={handleMenuLeave}
           className='relative group'>
-          <span className='flex items-center gap-1 px-3 py-2 rounded-md text-sm font-bold hover:bg-slate-900 cursor-pointer'>
+          <span className='flex items-center gap-1 px-3 py-2 rounded-md text-sm font-bold hover:bg-green-900 cursor-pointer'>
             {item.label}
             <ChevronDown className='w-4 h-4' />
           </span>
@@ -155,7 +155,7 @@ const Navbar = () => {
                 href={link.href}
                 key={link.href}
                 onClick={handleSubMenuClick}>
-                <span className='block px-3 py-1.5 text-sm hover:bg-gray-900 rounded'>
+                <span className='block px-3 py-1.5 text-sm hover:bg-green-900 rounded'>
                   {link.label}
                 </span>
               </Link>
@@ -171,8 +171,8 @@ const Navbar = () => {
           onClick={isMobile ? () => setMenuOpen(false) : undefined}
           className={`${
             isMobile
-              ? 'block px-3 py-2 rounded-md text-base font-bold hover:bg-slate-900'
-              : 'px-3 py-2 rounded-md text-sm font-bold hover:bg-slate-900'
+              ? 'block px-3 py-2 rounded-md text-base font-bold hover:bg-green-900'
+              : 'px-3 py-2 rounded-md text-sm font-bold hover:bg-green-900'
           }`}>
           {item.label}
         </span>

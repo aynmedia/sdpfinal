@@ -8,6 +8,7 @@ import Button from '../ui/button/button';
 import herohome from '@/../public/images/herohome.jpg';
 import purplebg from '@/../public/images/herosection.jpg';
 import anestlogo from '@/../public/images/anestlogo.svg';
+import kobelco from '@/../public/images/kobelco.svg';
 const Herosection = () => {
   return (
     <div className='relative w-full h-[100vh] overflow-hidden'>
@@ -55,14 +56,14 @@ const Herosection = () => {
             Precision Engineering, Redefined
           </motion.h1>
 
-          {/* <motion.p
+          <motion.p
             className='text-primary text-md'
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.7 }}>
-            Step into a world of innovation and reliability with tools and
-            solutions designed to empower your projects.
-          </motion.p> */}
+            Welcome to S.D. Pneumatics – Innovating Excellence in
+            Compressed Air Solutions
+          </motion.p>
 
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -76,15 +77,22 @@ const Herosection = () => {
           </motion.div>
 
           <div className='flex flex-col gap-2'>
-            <h1 className='text-primary text-xl font-normal mb-6'>
+            <h1 className='text-primary text-3xl font-normal mb-6'>
               Authorized Dealers of
             </h1>
-            <div className='bg-white rounded-lg p-2 shadow-sm w-fit'>
+            <div className='bg-white rounded-lg p-2 shadow-sm w-fit flex gap-6'>
               <Image
                 src={anestlogo}
                 alt='Anest Iwata'
-                width={300}
-                height={300}
+                width={200}
+                height={200}
+                className='max-w-full h-auto'
+              />
+              <Image
+                src={kobelco}
+                alt='Anest Iwata'
+                width={200}
+                height={200}
                 className='max-w-full h-auto'
               />
             </div>

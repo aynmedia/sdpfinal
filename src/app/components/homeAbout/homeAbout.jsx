@@ -1,19 +1,32 @@
 /** @format */
 'use client';
-import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import anestlogo from '@/../public/images/anestlogo.svg';
-import kobelco from '@/../public/images/kobelco.svg';
+import { Play, Pause } from 'lucide-react';
+import Image from 'next/image';
+import kobe from '@/../public/images/kobe.png';
 
 const HomeAbout = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   const heroStats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '10+', label: 'Years of Experience' },
-    { number: '95%', label: 'Customer Satisfaction Rate' },
+    {
+      number: '500+',
+      label: 'Projects Completed',
+      description: 'Delivering excellence across diverse industries',
+    },
+    {
+      number: '10+',
+      label: 'Years of Experience',
+      description: 'Trusted expertise in pneumatic solutions',
+    },
+    {
+      number: '95%',
+      label: 'Customer Satisfaction',
+      description: 'Consistently exceeding expectations',
+    },
   ];
 
-  // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -29,108 +42,85 @@ const HomeAbout = () => {
     },
   };
 
-  const scaleIn = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
+  const CustomVideo = () => {
+    return (
+      <div className='relative w-full rounded-2xl overflow-hidden bg-gray-900'>
+        <div className='aspect-w-16 aspect-h-9 relative'>
+          <div className='relative rounded-2xl overflow-hidden bg-gray-900 shadow-xl'>
+            <div className='relative' style={{ paddingTop: '56.25%' }}>
+              {' '}
+              {/* 16:9 Aspect Ratio */}
+              <iframe
+                className='absolute top-0 left-0 w-full h-full'
+                src='https://www.youtube.com/embed/zODMDux4Loc?autoplay=0&rel=0&showinfo=0'
+                title='SD Pneumatics Overview'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   };
 
   return (
-    <div className='bg-primary grid md:grid-cols-2'>
-      <motion.div
-        className='flex flex-col justify-center items-center px-4 md:px-12 bg-[#F4F4F4] gap-6 py-12 md:py-32'
-        initial='hidden'
-        whileInView='visible'
-        viewport={{ once: true, margin: '-100px' }}
-        variants={fadeInUp}
-        transition={{ duration: 0.6 }}>
-        <motion.h1
-          className='text-xl md:text-2xl font-bold uppercase'
-          variants={fadeInUp}>
-          Discover the Power of Air Compressors with SD Pneumatics
-        </motion.h1>
+    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100'>
+      <div className='max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8'>
+        <div className='lg:grid lg:grid-cols-2 lg:gap-16 items-center'>
+          {/* Left Column - Video Section */}
+          <motion.div
+            className='mb-12 lg:mb-0'
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            transition={{ duration: 0.6 }}>
+            <CustomVideo />
+          </motion.div>
 
-        <motion.div className='w-full' variants={scaleIn}>
-          <iframe
-            width='100%'
-            height='415'
-            src='https://www.youtube.com/embed/zODMDux4Loc?autoplay=1&mute=1&loop=0'
-            title='YouTube video player'
-            frameBorder='0'
-            allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-            allowFullScreen
-            className='rounded-lg shadow-lg'
-          />
-        </motion.div>
-      </motion.div>
-
-      <motion.div
-        className='flex flex-col justify-center items-center px-4 md:px-12 py-12 text-primary gap-6 bg-white'
-        initial='hidden'
-        whileInView='visible'
-        viewport={{ once: true, margin: '-100px' }}
-        variants={fadeInUp}
-        transition={{ duration: 0.6, delay: 0.2 }}>
-        <motion.p variants={fadeInUp} className='text-md leading-normal'>
-          The new line of Anest Iwata oil lubricated rotary vane vacuum pumps,
-          designed and manufactured in Germany, offers the best in Class
-          performance to the demanding needs of various industries and
-          applications
-        </motion.p>
-
-        <motion.div
-          className='grid grid-cols-3 gap-4'
-          variants={staggerChildren}>
-          {heroStats.map((stat, index) => (
-            <motion.div key={index} className='text-left' variants={fadeInUp}>
-              <motion.span
-                className='text-3xl md:text-4xl font-bold block text-primary'
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}>
-                {stat.number}
-              </motion.span>
-              <p className='text-sm md:text-base'>{stat.label}</p>
+          {/* Right Column - Content Section */}
+          <motion.div
+            className='space-y-10'
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true }}
+            variants={staggerChildren}>
+            <motion.div variants={fadeInUp} className='space-y-4'>
+              <h2 className='text-3xl font-bold text-gray-900 tracking-tight'>
+                Discover the Power of Innovation
+              </h2>
+              <p className='text-lg text-gray-600 leading-relaxed'>
+                Step into a world of innovation and reliability with tools and
+                solutions designed to empower your projects. From cutting-edge
+                technology to unmatched craftsmanship, experience engineering
+                that redefines precision and elevates performance at every
+                level.
+              </p>
             </motion.div>
-          ))}
-        </motion.div>
 
-        <motion.h1 className='text-primary text-2xl mt-12' variants={fadeInUp}>
-          Authorized dealer of
-        </motion.h1>
-
-        <motion.div
-          className='w-full flex md:flex-row flex-col items-center gap-6 justify-center mt-8 bg-white p-4 rounded-lg'
-          variants={scaleIn}>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}>
-            <Image
-              src={anestlogo}
-              alt='Anest Iwata'
-              width={300}
-              height={300}
-              className='max-w-full h-auto'
-            />
+            <motion.div
+              variants={fadeInUp}
+              className='grid grid-cols-1 gap-8 sm:grid-cols-3'>
+              {heroStats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className='bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300'
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.2 }}>
+                  <div className='text-4xl font-bold text-green-600 mb-2'>
+                    {stat.number}
+                  </div>
+                  <div className='text-lg font-semibold text-gray-900 mb-1'>
+                    {stat.label}
+                  </div>
+                  <p className='text-sm text-gray-600'>{stat.description}</p>
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}>
-            <Image
-              src={kobelco}
-              alt='Kobelco'
-              width={200}
-              height={200}
-              className='max-w-full h-auto'
-            />
-          </motion.div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   );
 };

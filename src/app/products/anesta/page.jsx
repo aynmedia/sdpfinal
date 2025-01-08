@@ -8,7 +8,7 @@ import Button from '@/app/components/ui/button/button';
 import Explore from '@/app/components/explore/explore';
 import AnestIwataProducts from './anestaproduct';
 import anesta from '@/../public/images/anesta.png';
-import anestabg from '@/../public/images/anestabg.jpg';
+import motor from '@/../public/images/motor.jpg';
 import anestalogo from '@/../public/images/anestlogo.svg';
 import sliderbg1 from '@/../public/images/sliderbg1.jpg';
 // Animation variants
@@ -237,7 +237,40 @@ const Anesta = () => {
           ))}
         </div>
       </motion.div>
-
+      <div className=' bg-primary text-white'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 max-w-7xl mx-auto my-4'>
+          <div className='space-y-4 flex flex-col justify-center'>
+            <h1 className='text-3xl font-bold tracking-tight'>Overview</h1>
+            <p className='leading-normal'>
+              Anest Iwata, a global leader in air compressors, vacuum pumps, and
+              coating equipment, is renowned for its innovative and
+              energy-efficient solutions. The company offers a comprehensive
+              range of products, including oil-free and lubricated air
+              compressors, high-performance vacuum pumps, and
+              precision-engineered spray guns. These products are meticulously
+              designed to meet the diverse needs of industries such as
+              automotive, healthcare, food and beverage, electronics, and
+              general manufacturing. With a focus on sustainability, Anest Iwata
+              incorporates eco-friendly technologies to minimize environmental
+              impact while delivering exceptional performance.
+            </p>
+            <p className='leading-normal'>
+              The company's commitment to quality and reliability is evident in
+              its advanced engineering and rigorous testing standards. Anest
+              Iwata’s solutions are widely recognized for their precision,
+              durability, and cost-effectiveness, making them a preferred choice
+              for businesses worldwide. From enhancing productivity in
+              industrial operations to supporting critical applications in
+              healthcare and electronics, Anest Iwata’s products are at the
+              forefront of technological innovation, empowering industries to
+              achieve higher efficiency and sustainability.
+            </p>
+          </div>
+          <div className='flex justify-center items-center py-4'>
+            <Image src={motor} alt='anesta' width={600} height={600} />
+          </div>
+        </div>
+      </div>
       <AnestIwataProducts />
     </div>
   );

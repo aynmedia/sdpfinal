@@ -34,9 +34,59 @@ const productData = [
   },
   {
     id: 5,
-    title: 'V-PSA Oxygen Generators',
+    title:
+      'VPSA Oxygen Generator: high energy efficiency for the highest consumption',
     description:
-      'The V-PSA Oxygen Generator is a high-pressure, high-purity oxygen generator that delivers a stable and reliable supply of oxygen to industrial applications. It is designed to meet the demands of various industries, including power generation, petrochemicals, and steel production.',
+      'For applications needing particularly high oxygen flows, NOVAIR introduces a new range of V-PSA solutions. Thanks to a low power consumption, the V-PSA technology allows a drastic reduction of oxygen production costs.',
+    image: '/images/products/vpsa.png',
+  },
+  {
+    id: 6,
+    title: 'Oxygen cylinder filling',
+    description:
+      'we offers a full range of high pressure oxygen cylinder filling systems with a filling capacity of up to 100 cylinders per day.',
+    image: '/images/products/vpsa.png',
+  },
+  {
+    id: 7,
+    title: 'Plug&Play Container OXYFACTORY',
+    description:
+      'We Industries presents OXYFACTORY, a turnkey solution that includes both autonomous oxygen production and cylinders filling.',
+    image: '/images/products/vpsa.png',
+  },
+  {
+    id: 8,
+    title: 'Oxygen generator Compact / Plug & Play',
+    description:
+      'We presents COMPACT-20 an oxygen generator that is compact, mobile, and easy to operate and maintain.',
+    image: '/images/products/vpsa.png',
+  },
+  {
+    id: 9,
+    title: 'Oxygen production for biogas desulphurisation',
+    description:
+      'We offers a complete range of generators that meet all needs in terms of flow rate, pressure and purity, all adapted to the production of oxygen that will then be injected into the gas stream or into the activated carbon.',
+    image: '/images/products/vpsa.png',
+  },
+  {
+    id: 10,
+    title: 'ONE, the Most Compact Oxygen Plant',
+    description:
+      'We proudly presents ONE, an ultra-compact plug-and-play Oxygen Plant that redefines on-site oxygen production.',
+    image: '/images/products/vpsa.png',
+  },
+  {
+    id: 11,
+    title: 'VLX, the ideal air compressor for Oxygen Generators.',
+    description:
+      'A pioneering company in Medical Oxygen Generators, VLX is the premier Air Compressor uniquely engineered to integrate seamlessly with an Oxygen Generator',
+    image: '/images/products/vpsa.png',
+  },
+  {
+    id: 12,
+    title: 'High efficiency on-site oxygen generation for water industries',
+    description:
+      'We proposes OXYPURE WATERPACK, a high-efficiency on-site oxygen generation system specially designed to meet the demands of Water Industries.',
     image: '/images/products/vpsa.png',
   },
 ];

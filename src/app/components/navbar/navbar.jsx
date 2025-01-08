@@ -87,7 +87,7 @@ const Navbar = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
   };
 
-  const textColorClass = isScrolled ? 'text-white' : 'text-primary';
+  const textColorClass = isScrolled ? 'text-white' : 'text-green-700';
 
   const renderMegaMenu = () => (
     <motion.div
@@ -102,7 +102,7 @@ const Navbar = () => {
           {menuItems[1].megaMenuContent[0].links.map((link, index) => (
             <Link href={link.href} key={index} onClick={handleSubMenuClick}>
               <span className='block px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors'>
-                <span className='text-base text-gray-900 dark:text-white hover:text-green-700 dark:hover:text-green-500'>
+                <span className='text-base text-gray-900 dark:text-white hover:text-slate-900 dark:hover:text-green-500'>
                   {link.label}
                 </span>
               </span>
@@ -134,7 +134,7 @@ const Navbar = () => {
           onMouseEnter={handleMenuEnter}
           onMouseLeave={handleMenuLeave}
           className='relative group'>
-          <span className='flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium hover:bg-green-700 cursor-pointer'>
+          <span className='flex items-center gap-1 px-3 py-2 rounded-md text-sm font-bold hover:bg-slate-900 cursor-pointer'>
             {item.label}
             <ChevronDown className='w-4 h-4' />
           </span>
@@ -155,7 +155,7 @@ const Navbar = () => {
                 href={link.href}
                 key={link.href}
                 onClick={handleSubMenuClick}>
-                <span className='block px-3 py-1.5 text-sm hover:bg-green-700 rounded'>
+                <span className='block px-3 py-1.5 text-sm hover:bg-gray-900 rounded'>
                   {link.label}
                 </span>
               </Link>
@@ -171,8 +171,8 @@ const Navbar = () => {
           onClick={isMobile ? () => setMenuOpen(false) : undefined}
           className={`${
             isMobile
-              ? 'block px-3 py-2 rounded-md text-base font-medium hover:bg-green-700'
-              : 'px-3 py-2 rounded-md text-sm font-medium hover:bg-green-700'
+              ? 'block px-3 py-2 rounded-md text-base font-bold hover:bg-slate-900'
+              : 'px-3 py-2 rounded-md text-sm font-bold hover:bg-slate-900'
           }`}>
           {item.label}
         </span>

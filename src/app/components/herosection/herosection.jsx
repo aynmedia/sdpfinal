@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import Button from '../ui/button/button';
 import herohome from '@/../public/images/herohome.jpg';
 import purplebg from '@/../public/images/purplebg.jpg';
+import anestlogo from '@/../public/images/anestlogo.svg';
 const Herosection = () => {
   return (
     <div className='relative w-full h-[100vh] overflow-hidden'>
@@ -60,9 +61,7 @@ const Herosection = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.7 }}>
             Step into a world of innovation and reliability with tools and
-            solutions designed to empower your projects. From cutting-edge
-            technology to unmatched craftsmanship, experience engineering that
-            redefines precision and elevates performance at every level.
+            solutions designed to empower your projects.
           </motion.p>
 
           <motion.div
@@ -75,6 +74,21 @@ const Herosection = () => {
               link='https://www.google.com'
             />
           </motion.div>
+
+          <div className='flex flex-col gap-2'>
+            <h1 className='text-white text-xl font-normal mb-6'>
+              Authorized Dealers of
+            </h1>
+            <div className='bg-white rounded-lg p-2 shadow-sm w-fit'>
+              <Image
+                src={anestlogo}
+                alt='Anest Iwata'
+                width={300}
+                height={300}
+                className='max-w-full h-auto'
+              />
+            </div>
+          </div>
         </motion.div>
 
         {/* Right Content */}

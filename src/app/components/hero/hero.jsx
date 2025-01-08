@@ -13,7 +13,7 @@ import anesta from '@/../public/images/anesta.png';
 import kobel from '@/../public/images/kobel.png';
 import anestlogo from '@/../public/images/anestlogo.svg';
 import kobelco from '@/../public/images/kobelco.svg';
-import oxy from '@/../public/images/oxygen.jpg';
+import oxy from '@/../public/images/oxygen.png';
 
 const slides = [
   {

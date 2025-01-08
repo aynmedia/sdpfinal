@@ -9,6 +9,7 @@ import Button from '@/app/components/ui/button/button';
 import Image from 'next/image';
 import { Dot } from 'lucide-react';
 import ApplicationsSection from './application';
+import Products from './products';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -161,6 +162,7 @@ const Page = () => {
         </div>
       </section>
       <ApplicationsSection />
+      <Products />
     </div>
   );
 };

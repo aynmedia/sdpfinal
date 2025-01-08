@@ -47,7 +47,7 @@ const OxygenBubbles = () => {
         {bubbles.map((bubble) => (
           <div
             key={bubble.id}
-            className='absolute rounded-full bg-white/30 backdrop-blur-sm'
+            className='absolute rounded-full bg-white/60 backdrop-blur-sm'
             style={{
               left: `${bubble.left}%`,
               width: `${bubble.size}px`,

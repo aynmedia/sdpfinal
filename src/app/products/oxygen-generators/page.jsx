@@ -10,7 +10,7 @@ import Image from 'next/image';
 import { Dot } from 'lucide-react';
 import ApplicationsSection from './application';
 import Products from './products';
-
+import family from '@/../public/images/family.jpg';
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -52,8 +52,16 @@ const scaleIn = {
 const Page = () => {
   return (
     <div className='min-h-screen'>
-      <section className='relative min-h-screen bg-[#0066CB]'>
-        <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent' />
+      <section className='relative min-h-screen'>
+        <div className='absolute inset-0 w-full h-full'>
+          <Image
+            src={family}
+            alt='background'
+            layout='fill'
+            objectFit='cover'
+          />
+        </div>
+        <div className='absolute inset-0 bg-blue-500/10 bg-blend-overlay' />
         <OxygenBubbles />
 
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
@@ -66,10 +74,14 @@ const Page = () => {
             <motion.div
               variants={slideIn}
               className='space-y-6 flex flex-col justify-center min-h-screen '>
-              <motion.h1 variants={fadeIn} className='text-4xl font-bold'>
+              <motion.h1
+                variants={fadeIn}
+                className='text-4xl font-bold text-white'>
                 Oxygen Generators
               </motion.h1>
-              <motion.p variants={fadeIn} className='text-black/80'>
+              <motion.p
+                variants={fadeIn}
+                className='text-white/80 font-semibold'>
                 Innovation Meets Excellence. Explore cutting-edge solutions in
                 air compression, vacuum technology, and coating systems crafted
                 to optimize productivity across industries. Trust Anest Iwata
@@ -87,13 +99,13 @@ const Page = () => {
             <motion.div
               variants={scaleIn}
               className='flex items-center justify-center'>
-              <Image
+              {/* <Image
                 src={oxygen}
                 alt='Oxygen Generator'
                 width={900}
                 height={900}
                 className='max-w-full h-auto'
-              />
+              /> */}
             </motion.div>
           </motion.div>
         </div>

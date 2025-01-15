@@ -11,6 +11,7 @@ import { Dot } from 'lucide-react';
 import ApplicationsSection from './application';
 import Products from './products';
 import family from '@/../public/images/family.jpg';
+import NavigationBar from '@/app/components/explore/explore';
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -63,8 +64,8 @@ const Page = () => {
         </div>
         <div className='absolute inset-0 bg-gradient-to-b from-transparent to-[#001233] ' />
         <OxygenBubbles />
-
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+          {' '}
           <motion.div
             className='grid md:grid-cols-2 gap-8 items-center'
             variants={staggerContainer}
@@ -110,6 +111,7 @@ const Page = () => {
           </motion.div>
         </div>
       </section>
+      <NavigationBar />
 
       <section className='pt-16 pb-4'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>

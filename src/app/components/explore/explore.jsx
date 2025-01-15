@@ -1,70 +1,59 @@
 /** @format */
 
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-const Explore = () => {
-  const products = [
-    {
-      title: 'Anesta Iwata',
-      href: '/products/anesta',
-    },
-    {
-      title: 'Kobelco',
-      href: '/products/kobelco',
-    },
-    {
-      title: 'Oxygen Generators',
-      href: '/products/oxygen-generators',
-    },
-    {
-      title: 'Nitrogen Generators',
-      href: '/products/nitrogen-generators',
-    },
-    {
-      title: 'Others',
-      href: '/products/others',
-    },
+const NavigationBar = () => {
+  const pathname = usePathname();
+  const navItems = [
+    { title: 'Anesta Iwata', href: '/products/anesta' },
+    { title: 'Kobelco', href: '/products/kobelco' },
+    { title: 'Oxygen Generators', href: '/products/oxygen-generators' },
+    { title: 'Nitrogen Generators', href: '/products/nitrogen-generators' },
+    { title: 'Others', href: '/products/others' },
   ];
+
   return (
-    <div className='bg-[#001233] text-white px-2 '>
-      <div className='py-12 max-w-7xl mx-auto grid grid-cols-3 gap-6'>
-        <h1 className='text-2xl font-normal mb-4 col-span-3'>
-          Explore Further
-        </h1>
-        {products.map((product, index) => (
-          <div
-            key={product.title}
-            className={`col-span-1 ${
-              index % 3 === 0
-                ? 'col-start-1'
-                : index % 3 === 1
-                ? 'col-start-2'
-                : 'col-start-3'
-            }`}>
-            <Link href={product.href}>
-              <span className='flex items-center font-medium gap-2 hover:text-green-600 transition-colors cursor-pointer'>
-                <span>{product.title}</span>
-                <svg
-                  className='w-4 h-4'
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    d='M9 5l7 7-7 7'
-                  />
-                </svg>
-              </span>
-            </Link>
-          </div>
-        ))}
+    <nav className='w-full bg-[#001233] text-white'>
+      <div className='max-w-7xl mx-auto px-4'>
+        {/* Desktop Navigation */}
+        <ul className='hidden md:flex space-x-8 relative'>
+          {navItems.map((item) => (
+            <li key={item.title} className='relative'>
+              <Link href={item.href}>
+                <span
+                  className={`text-lg font-normal hover:text-gray-200 transition-colors block py-4
+                  ${pathname === item.href ? 'text-white' : 'text-gray-300'}`}>
+                  {item.title}
+                  {pathname === item.href && (
+                    <span
+                      className='absolute top-0 left-0 right-0 h-1 bg-white'
+                      style={{ marginTop: '0' }}
+                    />
+                  )}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* Mobile Navigation */}
+        <div className='md:hidden'>
+          <select
+            className='w-full bg-[#001233] text-white py-4 focus:outline-none'
+            onChange={(e) => (window.location.href = e.target.value)}
+            value={pathname}>
+            {navItems.map((item) => (
+              <option key={item.title} value={item.href}>
+                {item.title}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
-export default Explore;
+export default NavigationBar;

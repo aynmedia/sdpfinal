@@ -10,35 +10,22 @@ import AnestIwataProducts from './anestaproduct';
 import anesta from '@/../public/images/anesta.png';
 import motor from '@/../public/images/bgred.jpg';
 import anestalogo from '@/../public/images/anestlogo.svg';
-import sliderbg1 from '@/../public/images/sliderbg1.jpg';
-// Animation variants
+
 const fadeIn = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.6,
-      ease: 'easeOut',
-    },
+    transition: { duration: 0.6, ease: 'easeOut' },
   },
 };
 
 const slideIn = {
-  hidden: {
-    x: -50,
-    opacity: 0,
-  },
+  hidden: { x: -50, opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,
-    transition: {
-      duration: 0.8,
-      ease: 'easeOut',
-    },
+    transition: { duration: 0.8, ease: 'easeOut' },
   },
 };
 
@@ -54,17 +41,11 @@ const staggerContainer = {
 };
 
 const scaleIn = {
-  hidden: {
-    scale: 0.8,
-    opacity: 0,
-  },
+  hidden: { scale: 0.8, opacity: 0 },
   visible: {
     scale: 1,
     opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: 'easeOut',
-    },
+    transition: { duration: 0.6, ease: 'easeOut' },
   },
 };
 
@@ -87,191 +68,150 @@ const applicationsList = [
 const Anesta = () => {
   return (
     <div className='relative'>
-      {/* <div className='grid grid-cols-1 md:grid-cols-2 min-h-screen relative'>
-        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#051D3F] via-transparent to-[#051D3F] z-10 pointer-events-none'></div>
-        <motion.div
-          className='relative order-last md:order-first flex flex-col justify-center bg-[#051D3F] text-white'
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true }}
-          variants={staggerChildren}>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#051D3F] via-transparent to-[#051D3F] pointer-events-none'></div>
-          <div className='md:mx-24 mx-4 flex gap-6 flex-col z-10'>
-            <motion.div
-              variants={fadeIn}
-              className='p-4 bg-white w-fit rounded-sm'>
-              <Image
-                src={anestalogo}
-                alt='Anesta Iwata'
-                width={200}
-                height={200}
-              />
-            </motion.div>
-            <motion.p
-              variants={fadeIn}
-              className='text-white text-4xl font-bold'>
-              Anesta Iwata
-            </motion.p>
-            <motion.p
-              variants={fadeIn}
-              className='text-white text-md font-normal'>
-              Innovation Meets Excellence. Explore cutting-edge solutions in air
-              compression, vacuum technology, and coating systems crafted to
-              optimize productivity across industries. Trust Anest Iwata for
-              precision-driven results.
-            </motion.p>
-            <motion.div variants={fadeIn}>
-              <Button
-                color='white'
-                text='Contact Us'
-                link='https://www.google.com'
-              />
-            </motion.div>
-          </div>
-        </motion.div>
-
-        <div className='order-first md:order-last relative w-full h-full'>
-          <motion.div
-            className='relative w-full h-full'
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}>
-            <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#051D3F] via-transparent to-[#051D3F] z-10 pointer-events-none'></div>
-            <Image
-              src={anesta}
-              alt='Anesta Iwata'
-              layout='fill'
-              objectFit='cover'
-              className='w-full h-full'
-            />
-          </motion.div>
-        </div>
-      </div> */}
-      <div className='absolute w-full h-screen'>
+      {/* Video Section */}
+      <div className='fixed w-full h-screen top-0 left-0 -z-10'>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}>
-          <Image src={sliderbg1} alt='product bg' fill objectFit='cover' />
-          <div className='absolute inset-0 bg-gradient-to-b from-gray-100/50 to-gray-100/50'></div>
+          transition={{ duration: 1 }}
+          style={{ willChange: 'transform' }}>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className='w-full h-screen object-cover'
+            poster='/images/video-thumbnail.jpg'
+            style={{
+              backfaceVisibility: 'hidden',
+              transform: 'translateZ(0)',
+            }}>
+            <source src='/images/bg.mp4' type='video/mp4' />
+            Your browser does not support the video tag.
+          </video>
+          <div className='absolute inset-0 bg-gradient-to-b from-gray-100/70 to-gray-100/70'></div>
         </motion.div>
       </div>
 
-      <div className='grid grid-cols-2 min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 justify-center'>
-        <motion.div
-          className='absolute flex md:flex-row gap-5 justify-center items-center min-h-screen'
-          variants={staggerContainer}
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true, margin: '-100px' }}>
+      {/* Content wrapper */}
+      <div className='relative z-10'>
+        <div className='grid grid-cols-2 min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 justify-center'>
           <motion.div
-            className='gap-6 flex flex-col w-full md:w-1/2'
-            variants={slideIn}>
-            <Image
-              src={anestalogo}
-              alt='Anesta Iwata'
-              width={300}
-              height={300}
-            />
-            <motion.h1
-              className='text-4xl font-bold'
-              variants={fadeIn}></motion.h1>
-            <motion.p className='text-black/60' variants={fadeIn}>
-              Innovation Meets Excellence. Explore cutting-edge solutions in air
-              compression, vacuum technology, and coating systems crafted to
-              optimize productivity across industries. Trust Anest Iwata for
-              precision-driven results.
-            </motion.p>
-            <motion.div variants={fadeIn}>
-              <Button
-                color='white'
-                text='Contact Us'
-                link='https://www.google.com'
-              />
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            className='gap-6 flex flex-col w-full md:w-1/2'
-            variants={scaleIn}>
-            <Image src={anesta} alt='Anesta Iwata' width={700} height={700} />
-          </motion.div>
-        </motion.div>
-      </div>
-      <Explore />
-
-      <motion.div
-        className='max-w-7xl mx-auto py-12'
-        variants={staggerContainer}
-        initial='hidden'
-        whileInView='visible'
-        viewport={{ once: true, margin: '-50px' }}>
-        <motion.h1
-          className='text-4xl font-semibold mb-4 px-2'
-          variants={fadeIn}>
-          Highlights
-        </motion.h1>
-
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          {[benefitsList, applicationsList].map((list, index) => (
+            className='absolute flex md:flex-row gap-5 justify-left items-center min-h-screen'
+            variants={staggerContainer}
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true, margin: '-100px' }}>
             <motion.div
-              key={index}
-              className={`p-4 ${index === 0 ? 'bg-[#f4f4f4]' : 'bg-white'}`}
-              variants={scaleIn}>
-              <h1 className='text-2xl font-normal mb-4'>
-                {index === 0 ? 'Benefits' : 'Applications'}
-              </h1>
-              <motion.ul variants={staggerContainer} className='space-y-4'>
-                {list.map((text, idx) => (
-                  <motion.li
-                    key={idx}
-                    variants={fadeIn}
-                    className='flex items-center'>
-                    <Dot className='h-12 w-12 mr-2' />
-                    <span>{text}</span>
-                  </motion.li>
-                ))}
-              </motion.ul>
+              className='gap-6 flex flex-col w-full md:w-1/2'
+              variants={slideIn}>
+              <Image
+                src={anestalogo}
+                alt='Anesta Iwata'
+                width={300}
+                height={300}
+              />
+              <motion.h1
+                className='text-4xl font-bold'
+                variants={fadeIn}></motion.h1>
+              <motion.p className='text-black/90' variants={fadeIn}>
+                Innovation Meets Excellence. Explore cutting-edge solutions in
+                air compression, vacuum technology, and coating systems crafted
+                to optimize productivity across industries. Trust Anest Iwata
+                for precision-driven results.
+              </motion.p>
+              <motion.div variants={fadeIn}>
+                <Button
+                  color='white'
+                  text='Contact Us'
+                  link='https://www.google.com'
+                />
+              </motion.div>
             </motion.div>
-          ))}
+          </motion.div>
         </div>
-      </motion.div>
-      <div className=' bg-[#f4f4f4] text-primary'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 max-w-7xl mx-auto my-4'>
-          <div className='space-y-4 flex flex-col justify-center'>
-            <h1 className='text-3xl font-bold tracking-tight'>Overview</h1>
-            <p className='leading-normal'>
-              Anest Iwata, a global leader in air compressors, vacuum pumps, and
-              coating equipment, is renowned for its innovative and
-              energy-efficient solutions. The company offers a comprehensive
-              range of products, including oil-free and lubricated air
-              compressors, high-performance vacuum pumps, and
-              precision-engineered spray guns. These products are meticulously
-              designed to meet the diverse needs of industries such as
-              automotive, healthcare, food and beverage, electronics, and
-              general manufacturing. With a focus on sustainability, Anest Iwata
-              incorporates eco-friendly technologies to minimize environmental
-              impact while delivering exceptional performance.
-            </p>
-            <p className='leading-normal'>
-              The company's commitment to quality and reliability is evident in
-              its advanced engineering and rigorous testing standards. Anest
-              Iwata’s solutions are widely recognized for their precision,
-              durability, and cost-effectiveness, making them a preferred choice
-              for businesses worldwide. From enhancing productivity in
-              industrial operations to supporting critical applications in
-              healthcare and electronics, Anest Iwata’s products are at the
-              forefront of technological innovation, empowering industries to
-              achieve higher efficiency and sustainability.
-            </p>
+
+        <Explore />
+
+        {/* Content sections with background */}
+        <div className='bg-white/95 relative z-10'>
+          <motion.div
+            className='max-w-7xl mx-auto py-12'
+            variants={staggerContainer}
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true, margin: '-50px' }}>
+            <motion.h1
+              className='text-4xl font-semibold mb-4 px-2'
+              variants={fadeIn}>
+              Highlights
+            </motion.h1>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+              {[benefitsList, applicationsList].map((list, index) => (
+                <motion.div
+                  key={index}
+                  className={`p-4 ${index === 0 ? 'bg-[#f4f4f4]' : 'bg-white'}`}
+                  variants={scaleIn}>
+                  <h1 className='text-2xl font-normal mb-4'>
+                    {index === 0 ? 'Benefits' : 'Applications'}
+                  </h1>
+                  <motion.ul variants={staggerContainer} className='space-y-4'>
+                    {list.map((text, idx) => (
+                      <motion.li
+                        key={idx}
+                        variants={fadeIn}
+                        className='flex items-center'>
+                        <Dot className='h-12 w-12 mr-2' />
+                        <span>{text}</span>
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <div className='bg-[#f4f4f4] text-primary'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 max-w-7xl mx-auto my-4'>
+              <div className='space-y-4 flex flex-col justify-center'>
+                <h1 className='text-3xl font-bold tracking-tight'>Overview</h1>
+                <p className='leading-normal'>
+                  Anest Iwata, a global leader in air compressors, vacuum pumps,
+                  and coating equipment, is renowned for its innovative and
+                  energy-efficient solutions. The company offers a comprehensive
+                  range of products, including oil-free and lubricated air
+                  compressors, high-performance vacuum pumps, and
+                  precision-engineered spray guns. These products are
+                  meticulously designed to meet the diverse needs of industries
+                  such as automotive, healthcare, food and beverage,
+                  electronics, and general manufacturing. With a focus on
+                  sustainability, Anest Iwata incorporates eco-friendly
+                  technologies to minimize environmental impact while delivering
+                  exceptional performance.
+                </p>
+                <p className='leading-normal'>
+                  The company's commitment to quality and reliability is evident
+                  in its advanced engineering and rigorous testing standards.
+                  Anest Iwata’s solutions are widely recognized for their
+                  precision, durability, and cost-effectiveness, making them a
+                  preferred choice for businesses worldwide. From enhancing
+                  productivity in industrial operations to supporting critical
+                  applications in healthcare and electronics, Anest Iwata’s
+                  products are at the forefront of technological innovation,
+                  empowering industries to achieve higher efficiency and
+                  sustainability.
+                </p>
+              </div>
+              <div className='flex justify-center items-center py-4'>
+                <Image src={motor} alt='anesta' width={600} height={600} />
+              </div>
+            </div>
           </div>
-          <div className='flex justify-center items-center py-4'>
-            <Image src={motor} alt='anesta' width={600} height={600} />
-          </div>
+
+          <AnestIwataProducts />
         </div>
       </div>
-      <AnestIwataProducts />
     </div>
   );
 };

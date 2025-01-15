@@ -55,34 +55,34 @@ const Calltoaction = () => {
       title: 'Request Quote',
       description:
         'Get a customized quote tailored to your specific pneumatic needs. Our team is ready to provide you with the best solutions at competitive prices.',
-      overlayColor: 'bg-primary/70',
+      overlayColor: 'bg-[#001233]/70',
       image: Quote,
     },
     {
       title: 'Support Request',
       description:
         'Whether you have a technical query or need assistance with a product, submit your support request.',
-      overlayColor: 'bg-primary',
+      overlayColor: 'bg-[#001233]',
       image: spare,
     },
     {
       title: 'Request Spare Parts',
       description:
         'Submit your request for spare parts, and our team will ensure you receive the right components to keep your systems running smoothly.',
-      overlayColor: 'bg-primary/70',
+      overlayColor: 'bg-[#001233]/70',
       image: spare,
     },
     {
       title: 'Service Request',
       description:
         'Submit your service request, and our expert team will assist you promptly. We’re committed to ensuring your pneumatic systems operate at their best with minimal downtime.',
-      overlayColor: 'bg-primary/70',
+      overlayColor: 'bg-[#001233]/70',
       image: service,
     },
   ];
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-primary text-white w-full overflow-hidden'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-[#001233] text-white w-full overflow-hidden'>
       {cards.map((card, index) => (
         <Card key={index} delay={index * 0.2} {...card} />
       ))}

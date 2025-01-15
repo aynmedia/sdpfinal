@@ -19,7 +19,7 @@ const AnestIwataProducts = () => {
   const [totalProducts, setTotalProducts] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [sortBy, setSortBy] = useState('date-asc');
-  const productsPerPage = 12;
+  const productsPerPage = 100;
   const ANEST_IWATA_CATEGORY_ID = 3;
 
   // Fetch Categories

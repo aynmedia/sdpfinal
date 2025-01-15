@@ -53,9 +53,7 @@ const Navbar = () => {
 
   useEffect(() => {
     controls.start({
-      backgroundColor: isScrolled
-        ? 'rgba(29, 29, 29, 1)'
-        : 'rgba(29, 29, 29, 0)',
+      backgroundColor: isScrolled ? 'rgba(0, 18, 51, 1)' : 'rgba(0, 18, 51, 0)',
       transition: { duration: 0.3 },
     });
   }, [isScrolled, controls]);
@@ -257,7 +255,7 @@ const Navbar = () => {
       {/* Overlay for mega menu */}
       {megaMenuOpen && (
         <div
-          className='fixed inset-0 bg-black bg-opacity-50 z-10'
+          className='fixed inset-0 bg-[#001233] bg-opacity-50 z-10'
           onMouseEnter={handleMenuEnter}
           onClick={() => setMegaMenuOpen(false)}
         />

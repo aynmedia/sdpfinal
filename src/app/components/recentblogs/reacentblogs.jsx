@@ -123,7 +123,7 @@ export default function LatestPostsWidget() {
   }
 
   return (
-    <div className='bg-primary text-white px-4 py-16'>
+    <div className='bg-white text-primary px-4 py-16'>
       <div className='max-w-7xl mx-auto'>
         {/* <h2 className='text-4xl font-bold mb-12 text-center'>Latest Posts</h2> */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
@@ -136,7 +136,7 @@ export default function LatestPostsWidget() {
                 ref={(el) => (postsRef.current[post.id] = el)}
                 data-post-id={post.id}
                 className={`
-                  bg-primary  overflow-hidden 
+                  bg-white  overflow-hidden 
                   transform transition-all duration-500 ease-out
                   ${
                     visiblePosts.has(post.id.toString())

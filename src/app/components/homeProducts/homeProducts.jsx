@@ -15,28 +15,28 @@ const HomeProducts = () => {
       description:
         'Anest Iwata offers an extensive range of products covering the entire spectrum of paint coating equipment to meet varied requirements of its customers across different industries.',
       image: abouthome,
-      overlay: 'bg-primary ',
+      overlay: 'bg-[#001233] ',
     },
     {
       title: 'Kobelco',
       description:
         'KOBELCO COMPRESSORS is a global compressed air solution provider from Japan, having over 100 years history. Introducing corporate philosophy, history, locations and other corporate information.',
       image: kobe,
-      overlay: 'bg-[#171717]/70 backdrop-blur-[1px]',
+      overlay: 'bg-[#001233]/70 backdrop-blur-[1px]',
     },
     {
       title: 'Oxygen Generator',
       description:
         'Anest Iwata offers an extensive range of products covering the entire spectrum of paint coating equipment to meet varied requirements of its customers across different industries.',
       image: hero,
-      overlay: 'bg-[#171717]/70 backdrop-blur-[1px]',
+      overlay: 'bg-[#001233]/70 backdrop-blur-[1px]',
     },
     {
       title: 'Others',
       description:
         'Anest Iwata offers an extensive range of products covering the entire spectrum of paint coating equipment to meet varied requirements of its customers across different industries.',
       image: hero,
-      overlay: 'bg-primary',
+      overlay: 'bg-[#001233]',
     },
   ];
 
@@ -67,7 +67,7 @@ const HomeProducts = () => {
   };
 
   return (
-    <div className='bg-primary grid md:grid-cols-3'>
+    <div className='bg-[#001233] grid md:grid-cols-3'>
       <motion.div
         className='flex flex-col justify-center items-center px-4 md:px-12 gap-6 py-12 col-span-1'
         initial='hidden'

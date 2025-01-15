@@ -7,6 +7,7 @@ import { Twitter, Facebook, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 import logo from '@/../public/images/logo.png';
 import map from '@/../public/images/map.png';
+import ContactSection from './contact';
 const Footer = () => {
   const fadeInUp = {
     initial: { y: 60, opacity: 0 },
@@ -15,9 +16,23 @@ const Footer = () => {
   };
 
   return (
-    <footer className='bg-black text-white pt-16 pb-8'>
-      <div className='container mx-auto px-4'>
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-12'>
+    <footer className='bg-[#001233] text-white pt-16 pb-8'>
+      <div className='min-h-screen'>
+        <ContactSection />
+      </div>
+      <div>
+        <div className='w-full my-12 max-w-7xl mx-auto'>
+          <iframe
+            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.649754521723!2d77.54788289999999!3d12.9942393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d93e7b9c72b%3A0x7245c24d79dcdff4!2sS.D.%20PNEUMATICS!5e0!3m2!1sen!2sin!4v1736910768577!5m2!1sen!2sin'
+            width='100%'
+            height='350'
+            style={{ border: '0' }}
+            allowFullScreen='no-referrer-when-downgrade'
+            loading='lazy'></iframe>
+        </div>
+      </div>
+      <div className='max-w-7xl mx-auto px-4 pt-12'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-12'>
           {/* Company Info */}
           <motion.div
             initial='initial'
@@ -66,28 +81,6 @@ const Footer = () => {
                 )
               )}
             </ul>
-          </motion.div>
-
-          {/* Contact Information */}
-          <motion.div
-            initial='initial'
-            whileInView='animate'
-            viewport={{ once: true }}
-            variants={fadeInUp}>
-            <h3 className='text-xl font-semibold mb-6'>Contact information</h3>
-            <div className='space-y-4 text-gray-300'>
-              <p>456, 4th Main Rd, Manjunath Nagar, Basaveshwar Nagar,</p>
-              <p>Bengaluru, Karnataka 560010</p>
-              <p className='text-green-600'>+91 99865 23331</p>
-              <p>Mon-Sat, 9:00am-8:00pm</p>
-              <p>
-                <Link
-                  href='mailto:care@sdpneumatics.in'
-                  className='text-green-600 hover:text-yellow-300'>
-                  care@sdpneumatics.in
-                </Link>
-              </p>
-            </div>
           </motion.div>
 
           {/* Offices */}

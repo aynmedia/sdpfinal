@@ -8,7 +8,7 @@ import Button from '@/app/components/ui/button/button';
 import Explore from '@/app/components/explore/explore';
 import AnestIwataProducts from './anestaproduct';
 import anesta from '@/../public/images/anesta.png';
-import motor from '@/../public/images/motor.jpg';
+import motor from '@/../public/images/bgred.jpg';
 import anestalogo from '@/../public/images/anestlogo.svg';
 import sliderbg1 from '@/../public/images/sliderbg1.jpg';
 // Animation variants
@@ -171,8 +171,8 @@ const Anesta = () => {
             <Image
               src={anestalogo}
               alt='Anesta Iwata'
-              width={200}
-              height={200}
+              width={300}
+              height={300}
             />
             <motion.h1 className='text-4xl font-bold' variants={fadeIn}>
               Anesta Iwata
@@ -237,7 +237,7 @@ const Anesta = () => {
           ))}
         </div>
       </motion.div>
-      <div className=' bg-primary text-white'>
+      <div className=' bg-[#f4f4f4] text-primary'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 max-w-7xl mx-auto my-4'>
           <div className='space-y-4 flex flex-col justify-center'>
             <h1 className='text-3xl font-bold tracking-tight'>Overview</h1>

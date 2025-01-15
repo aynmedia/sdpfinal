@@ -166,8 +166,10 @@ const ContactSection = () => {
               Get in Touch
             </h2>
             <p className='text-gray-600 mb-8'>
-              Arctic char, steelhead sprat sea lamprey grunion. Walleye poolfish
-              sand goby butterfly ray stream
+              Have a question or need assistance? We’re here to help! Whether
+              you’re looking for expert advice, more information about our
+              offerings, or simply want to connect, our team is ready to assist.
+              Your feedback and inquiries are always welcome!
             </p>
 
             <form onSubmit={handleSubmit} className='space-y-6'>

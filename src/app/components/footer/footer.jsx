@@ -44,23 +44,6 @@ const Footer = () => {
               Dedicated to providing high-quality pneumatic solutions that drive
               efficiency and innovation across industries.
             </p>
-            <div className='flex space-x-4'>
-              <Link
-                href='#'
-                className='text-gray-400 hover:text-white transition-colors'>
-                <Twitter size={20} />
-              </Link>
-              <Link
-                href='#'
-                className='text-gray-400 hover:text-white transition-colors'>
-                <Facebook size={20} />
-              </Link>
-              <Link
-                href='#'
-                className='text-gray-400 hover:text-white transition-colors'>
-                <Linkedin size={20} />
-              </Link>
-            </div>
           </motion.div>
 
           {/* What we do */}

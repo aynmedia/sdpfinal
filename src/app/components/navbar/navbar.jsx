@@ -85,7 +85,7 @@ const Navbar = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
   };
 
-  const textColorClass = isScrolled ? 'text-white' : 'text-primary';
+  const textColorClass = isScrolled ? 'text-white' : 'text-white';
 
   const renderMegaMenu = () => (
     <motion.div
@@ -132,7 +132,7 @@ const Navbar = () => {
           onMouseEnter={handleMenuEnter}
           onMouseLeave={handleMenuLeave}
           className='relative group'>
-          <span className='flex items-center gap-1 px-3 py-2 rounded-md text-sm font-bold hover:bg-blue-900 cursor-pointer'>
+          <span className='flex items-center gap-1 px-3 py-2 rounded-md text-md font-bold hover:bg-blue-900 cursor-pointer'>
             {item.label}
             <ChevronDown className='w-4 h-4' />
           </span>
@@ -169,8 +169,8 @@ const Navbar = () => {
           onClick={isMobile ? () => setMenuOpen(false) : undefined}
           className={`${
             isMobile
-              ? 'block px-3 py-2 rounded-md text-base font-bold hover:bg-blue-900'
-              : 'px-3 py-2 rounded-md text-sm font-bold hover:bg-blue-900'
+              ? 'block px-3 py-2 rounded-md text-md font-bold hover:bg-blue-900'
+              : 'px-3 py-2 rounded-md text-md font-bold hover:bg-blue-900'
           }`}>
           {item.label}
         </span>
@@ -184,11 +184,11 @@ const Navbar = () => {
         animate={controls}
         className={`fixed w-full z-20 ${textColorClass}`}>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex items-center justify-between h-24'>
+          <div className='flex items-center justify-between h-32'>
             <div className='flex items-center'>
               <Link href='/'>
                 <span className='text-xl font-bold'>
-                  <Image src={logo} alt='Logo' width={100} height={100} />
+                  <Image src={logo} alt='Logo' width={150} height={150} />
                 </span>
               </Link>
             </div>

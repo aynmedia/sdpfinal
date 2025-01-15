@@ -109,7 +109,7 @@ export function Leading() {
 
         <motion.div
           variants={itemVariants}
-          className='relative flex h-[500px] md:h-[630px] w-full items-center justify-center p-4'>
+          className='relative flex h-full w-full items-center justify-center p-4'>
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}

@@ -45,7 +45,7 @@ const HomeAbout = () => {
   const CustomVideo = () => {
     return (
       <div className='relative w-full rounded-2xl overflow-hidden bg-gray-900'>
-        <div className='aspect-w-16 aspect-h-9 relative'>
+        <div className='aspect-w-16 aspect-h-12 relative'>
           <div className='relative rounded-2xl overflow-hidden bg-gray-900 shadow-xl'>
             <div className='relative' style={{ paddingTop: '56.25%' }}>
               {' '}
@@ -65,7 +65,7 @@ const HomeAbout = () => {
   };
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-gray-100 to-gray-100'>
+    <div className=' bg-gradient-to-br from-gray-100 to-gray-100'>
       <div className='max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8'>
         <div className='lg:grid lg:grid-cols-2 lg:gap-16 items-center'>
           {/* Left Column - Video Section */}
@@ -90,7 +90,7 @@ const HomeAbout = () => {
               <h2 className='text-3xl font-bold text-gray-900 tracking-tight'>
                 Discover the Power of Innovation
               </h2>
-              <p className='text-lg text-gray-600 leading-relaxed'>
+              <p className='text-md text-gray-600 leading-relaxed'>
                 Step into a world of innovation and reliability with tools and
                 solutions designed to empower your projects. From cutting-edge
                 technology to unmatched craftsmanship, experience engineering

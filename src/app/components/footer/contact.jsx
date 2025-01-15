@@ -90,7 +90,7 @@ const ContactSection = () => {
           fill
           objectFit='contain'
           priority
-          className='opacity-5'
+          className='opacity-10'
         />
       </div>
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -180,7 +180,7 @@ const ContactSection = () => {
                   placeholder='Full name'
                   value={formData.fullName}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-md border ${
+                  className={`w-full px-4 py-3 rounded-md border text-primary ${
                     errors.fullName ? 'border-red-500' : 'border-gray-300'
                   } focus:outline-none focus:ring-2 focus:ring-red-500 
                   focus:border-transparent transition-all`}
@@ -197,7 +197,7 @@ const ContactSection = () => {
                   placeholder='Email'
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-md border ${
+                  className={`w-full px-4 py-3 rounded-md border text-primary ${
                     errors.email ? 'border-red-500' : 'border-gray-300'
                   } focus:outline-none focus:ring-2 focus:ring-red-500 
                   focus:border-transparent transition-all`}
@@ -214,7 +214,7 @@ const ContactSection = () => {
                   placeholder='Subject'
                   value={formData.subject}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-md border ${
+                  className={`w-full px-4 py-3 rounded-md border text-primary ${
                     errors.subject ? 'border-red-500' : 'border-gray-300'
                   } focus:outline-none focus:ring-2 focus:ring-red-500 
                   focus:border-transparent transition-all`}
@@ -231,7 +231,7 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className={`w-full px-4 py-3 rounded-md border ${
+                  className={`w-full px-4 py-3 rounded-md border text-primary ${
                     errors.message ? 'border-red-500' : 'border-gray-300'
                   } focus:outline-none focus:ring-2 focus:ring-red-500 
                   focus:border-transparent transition-all`}

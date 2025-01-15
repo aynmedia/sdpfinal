@@ -65,19 +65,19 @@ const Herosection = () => {
             <h1 className='text-primary text-3xl font-normal mb-6'>
               Authorized Dealers of
             </h1>
-            <div className='bg-white rounded-lg p-2 shadow-sm w-fit flex gap-6'>
+            <div className=' rounded-lg p-2 shadow-sm w-fit flex gap-6'>
               <Image
                 src={anestlogo}
                 alt='Anest Iwata'
-                width={200}
-                height={200}
+                width={300}
+                height={300}
                 className='max-w-full h-auto'
               />
               <Image
                 src={kobelco}
                 alt='Kobelco'
-                width={200}
-                height={200}
+                width={300}
+                height={300}
                 className='max-w-full h-auto'
               />
             </div>

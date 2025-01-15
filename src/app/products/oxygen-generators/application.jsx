@@ -83,7 +83,7 @@ const ApplicationsSection = () => {
         </div>
 
         <div className='mt-12 text-center'>
-          <button className='inline-flex items-center gap-2 rounded-lg bg-sky-600 px-6 py-3 text-white transition-colors hover:bg-sky-700'>
+          <button className='inline-flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 text-white transition-colors hover:bg-green-700'>
             Learn More About Our Applications
             <svg className='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'>
               <path

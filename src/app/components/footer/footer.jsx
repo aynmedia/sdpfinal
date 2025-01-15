@@ -20,17 +20,7 @@ const Footer = () => {
       <div className='min-h-screen'>
         <ContactSection />
       </div>
-      <div>
-        <div className='w-full my-12 max-w-7xl mx-auto'>
-          <iframe
-            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.649754521723!2d77.54788289999999!3d12.9942393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d93e7b9c72b%3A0x7245c24d79dcdff4!2sS.D.%20PNEUMATICS!5e0!3m2!1sen!2sin!4v1736910768577!5m2!1sen!2sin'
-            width='100%'
-            height='350'
-            style={{ border: '0' }}
-            allowFullScreen='no-referrer-when-downgrade'
-            loading='lazy'></iframe>
-        </div>
-      </div>
+
       <div className='max-w-7xl mx-auto px-4 pt-12'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-12'>
           {/* Company Info */}
@@ -73,12 +63,15 @@ const Footer = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
             className='gap-6'>
-            <h3 className='text-xl font-semibold mb-6'>Offices</h3>
-            <p className='text-gray-300 mb-4'>
-              Join us in driving the future of pneumatics with cutting-edge
-              technology and a customer-first approach.
-            </p>
-            <Image src={map} alt='Logo' width={400} height={400} />
+            <div className='w-full my-2 max-w-7xl mx-auto'>
+              <iframe
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.649754521723!2d77.54788289999999!3d12.9942393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d93e7b9c72b%3A0x7245c24d79dcdff4!2sS.D.%20PNEUMATICS!5e0!3m2!1sen!2sin!4v1736910768577!5m2!1sen!2sin'
+                width='100%'
+                height='200'
+                style={{ border: '0' }}
+                allowFullScreen='no-referrer-when-downgrade'
+                loading='lazy'></iframe>
+            </div>
           </motion.div>
         </div>
 

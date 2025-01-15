@@ -46,9 +46,9 @@ export function Leading() {
   return (
     <motion.div
       className='relative min-h-screen bg-fixed bg-cover bg-center'
-      style={{
-        backgroundImage: `url(${bg.src})`,
-      }}
+      // style={{
+      //   backgroundImage: `url(${bg.src})`,
+      // }}
       initial='hidden'
       whileInView='visible'
       viewport={{ once: true, amount: 0.1 }}

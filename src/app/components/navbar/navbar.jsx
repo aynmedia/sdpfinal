@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
 import logo from '@/../public/images/logo.png';
-import motor from '@/../public/images/motor.jpg';
+import motor from '@/../public/images/bgred.jpg';
 
 const menuItems = [
   { path: '/', label: 'Home' },
@@ -100,7 +100,7 @@ const Navbar = () => {
           {menuItems[1].megaMenuContent[0].links.map((link, index) => (
             <Link href={link.href} key={index} onClick={handleSubMenuClick}>
               <span className='block px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors'>
-                <span className='text-base text-gray-900 dark:text-white hover:text-slate-900 dark:hover:text-green-500'>
+                <span className='text-base text-gray-900 dark:text-white hover:text-slate-900 dark:hover:text-blue-500'>
                   {link.label}
                 </span>
               </span>
@@ -108,7 +108,7 @@ const Navbar = () => {
           ))}
         </div>
         <div className='col-span-4 relative h-[50vh]'>
-          <div className='absolute inset-0 bg-green-800 rounded-lg overflow-hidden'>
+          <div className='absolute inset-0 bg-blue-800 rounded-lg overflow-hidden'>
             <Image
               src={motor}
               alt='Featured Products'
@@ -132,7 +132,7 @@ const Navbar = () => {
           onMouseEnter={handleMenuEnter}
           onMouseLeave={handleMenuLeave}
           className='relative group'>
-          <span className='flex items-center gap-1 px-3 py-2 rounded-md text-sm font-bold hover:bg-green-900 cursor-pointer'>
+          <span className='flex items-center gap-1 px-3 py-2 rounded-md text-sm font-bold hover:bg-blue-900 cursor-pointer'>
             {item.label}
             <ChevronDown className='w-4 h-4' />
           </span>
@@ -153,7 +153,7 @@ const Navbar = () => {
                 href={link.href}
                 key={link.href}
                 onClick={handleSubMenuClick}>
-                <span className='block px-3 py-1.5 text-sm hover:bg-green-900 rounded'>
+                <span className='block px-3 py-1.5 text-sm hover:bg-blue-900 rounded'>
                   {link.label}
                 </span>
               </Link>
@@ -169,8 +169,8 @@ const Navbar = () => {
           onClick={isMobile ? () => setMenuOpen(false) : undefined}
           className={`${
             isMobile
-              ? 'block px-3 py-2 rounded-md text-base font-bold hover:bg-green-900'
-              : 'px-3 py-2 rounded-md text-sm font-bold hover:bg-green-900'
+              ? 'block px-3 py-2 rounded-md text-base font-bold hover:bg-blue-900'
+              : 'px-3 py-2 rounded-md text-sm font-bold hover:bg-blue-900'
           }`}>
           {item.label}
         </span>
@@ -245,7 +245,7 @@ const Navbar = () => {
             animate='visible'
             exit='hidden'
             variants={mobileMenuVariants}
-            className='md:hidden bg-green-800 text-white'>
+            className='md:hidden bg-blue-800 text-white'>
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {menuItems.map((item) => renderMenuItem(item, true))}
             </div>

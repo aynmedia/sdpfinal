@@ -61,7 +61,7 @@ const Page = () => {
             objectFit='cover'
           />
         </div>
-        <div className='absolute inset-0 bg-gradient-to-b from-transparent to-blue-500/90 ' />
+        <div className='absolute inset-0 bg-gradient-to-b from-transparent to-[#001233] ' />
         <OxygenBubbles />
 
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>

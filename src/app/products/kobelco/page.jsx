@@ -99,9 +99,9 @@ const Kobelco = () => {
               width={200}
               height={200}
             />
-            <motion.h1 className='text-4xl font-bold' variants={fadeIn}>
-              Anesta Iwata
-            </motion.h1>
+            <motion.h1
+              className='text-4xl font-bold'
+              variants={fadeIn}></motion.h1>
             <motion.p className='text-black/60' variants={fadeIn}>
               Innovation Meets Excellence. Explore cutting-edge solutions in air
               compression, vacuum technology, and coating systems crafted to

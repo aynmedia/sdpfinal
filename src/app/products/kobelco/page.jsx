@@ -132,7 +132,7 @@ const Kobelco = () => {
         <Explore />
 
         {/* Content sections with background */}
-        <div className='bg-white/95 relative z-10'>
+        <div className='bg-white relative z-10'>
           <motion.div
             className='max-w-7xl mx-auto py-12'
             variants={staggerContainer}
@@ -170,9 +170,9 @@ const Kobelco = () => {
             </div>
           </motion.div>
 
-          <div className='bg-[#f4f4f4] text-primary'>
+          <div className='bg-[#001233] text-white'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 max-w-7xl mx-auto my-4'>
-              <div className='space-y-4 flex flex-col justify-center'>
+              <div className='space-y-4 flex flex-col justify-center py-12'>
                 <h1 className='text-3xl font-bold tracking-tight'>Overview</h1>
                 <p className='leading-normal'>
                   Kobelco Compressors offers a diverse range of advanced

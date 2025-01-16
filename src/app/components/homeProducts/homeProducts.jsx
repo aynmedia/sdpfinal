@@ -3,10 +3,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import abouthome from '@/../public/images/abouthome.png';
-import kobe from '@/../public/images/kobe.png';
-import hero from '@/../public/images/hero.png';
+import hero from '@/../public/images/gears.jpg';
 
 const HomeProducts = () => {
   const products = [
@@ -14,110 +11,76 @@ const HomeProducts = () => {
       title: 'Anest Iwata',
       description:
         'Anest Iwata offers an extensive range of products covering the entire spectrum of paint coating equipment to meet varied requirements of its customers across different industries.',
-      image: abouthome,
-      overlay: 'bg-[#001233] ',
     },
     {
       title: 'Kobelco',
       description:
         'KOBELCO COMPRESSORS is a global compressed air solution provider from Japan, having over 100 years history. Introducing corporate philosophy, history, locations and other corporate information.',
-      image: kobe,
-      overlay: 'bg-[#001233]/70 backdrop-blur-[1px]',
     },
     {
       title: 'Oxygen Generator',
       description:
-        'Anest Iwata offers an extensive range of products covering the entire spectrum of paint coating equipment to meet varied requirements of its customers across different industries.',
-      image: hero,
-      overlay: 'bg-[#001233]/70 backdrop-blur-[1px]',
+        'Oxygen generators deliver pure, dry oxygen gas suitable for a wide range of industrial and commercial applications, ensuring efficiency and reliability.',
+    },
+    {
+      title: 'Nitrogen Generator',
+      description:
+        'Nitrogen generators deliver pure, dry nitrogen gas suitable for a wide range of industrial and commercial applications, ensuring efficiency and reliability.',
     },
     {
       title: 'Others',
       description:
-        'Anest Iwata offers an extensive range of products covering the entire spectrum of paint coating equipment to meet varied requirements of its customers across different industries.',
-      image: hero,
-      overlay: 'bg-[#001233',
+        'SD Pneumatics offers an extensive range of products covering the entire spectrum of paint coating equipment to meet varied requirements of its customers across different industries.',
     },
   ];
 
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const productCard = {
-    hidden: { opacity: 0, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.4,
-      },
-    },
-  };
-
   return (
-    <div className='bg-[#001233] grid md:grid-cols-3'>
-      <motion.div
-        className='flex flex-col justify-center items-center px-4 md:px-12 gap-6 py-12 col-span-1'
-        initial='hidden'
-        whileInView='visible'
-        viewport={{ once: true, margin: '-100px' }}
-        variants={fadeInUp}>
-        <motion.h1
-          className='text-xl md:text-2xl font-normal capitalize text-white'
-          variants={fadeInUp}>
-          Discover our comprehensive range of industrial solutions, from
-          high-performance air compressors to specialized pneumatic systems,
-          designed to meet your specific needs.
-        </motion.h1>
-      </motion.div>
+    <div className='relative bg-[#001233] py-16'>
+      {/* Parallax Background */}
+      <div
+        className='absolute inset-0 bg-cover bg-fixed'
+        style={{ backgroundImage: `url(${hero.src})` }}>
+        <div className='absolute inset-0 bg-black/30'></div>
+      </div>
 
-      <motion.div
-        className='flex flex-col justify-center items-center bg-white col-span-2'
-        initial='hidden'
-        whileInView='visible'
-        viewport={{ once: true }}
-        variants={staggerContainer}>
-        <motion.div
-          className='grid grid-cols-1 sm:grid-cols-2 w-full h-full'
-          variants={staggerContainer}>
+      {/* Content */}
+      <div className='relative z-10 max-w-7xl mx-auto px-6 lg:px-8'>
+        {/* Heading Section */}
+        <div className='text-center mb-12'>
+          <h1 className='text-4xl font-bold text-white'>
+            Discover Industrial Excellence
+          </h1>
+          <p className='text-lg text-gray-300 mt-4'>
+            Explore our extensive range of innovative solutions designed to meet
+            your specific industrial needs.
+          </p>
+        </div>
+
+        {/* Product Grid */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
           {products.map((product, index) => (
             <motion.div
               key={index}
-              className='relative h-64 overflow-hidden cursor-pointer'
-              variants={productCard}>
-              <Image
-                src={product.image}
-                alt={product.title}
-                fill
-                className='object-cover'
-                sizes='(max-width: 768px) 100vw, 50vw'
-              />
-              <div className={`absolute inset-0 ${product.overlay}`}>
-                <div className='absolute inset-0 flex flex-col justify-center px-12'>
-                  <h2 className='text-xl font-bold mb-2 text-left text-white'>
-                    {product.title}
-                  </h2>
-                  <p className='text-sm text-left font-normal leading-6 opacity-90 text-white'>
-                    {product.description}
-                  </p>
-                </div>
+              className='relative bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 overflow-hidden group'
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}>
+              {/* Card Content */}
+              <div>
+                <h2 className='text-2xl font-semibold text-[#001233] group-hover:text-[#0056b3] transition-colors duration-300'>
+                  {product.title}
+                </h2>
+                <p className='text-gray-600 mt-3 text-sm leading-relaxed group-hover:text-gray-800 transition-colors duration-300'>
+                  {product.description}
+                </p>
               </div>
+              {/* Hover Accent */}
+              <div className='absolute inset-0 bg-gradient-to-r from-[#001233]/20 to-[#0056b3]/10 scale-0 group-hover:scale-100 rounded-lg transition-transform duration-300'></div>
             </motion.div>
           ))}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   );
 };

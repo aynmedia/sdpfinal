@@ -21,7 +21,7 @@ const Herosection = () => {
         objectFit='cover'
         className='absolute top-0 left-0 w-full h-full z-[-1]'
       />
-
+      <div className='absolute inset-0 bg-white opacity-20 z-[-1]' />
       {/* Particles Background */}
       <ParticlesBackground />
 
@@ -69,15 +69,15 @@ const Herosection = () => {
               <Image
                 src={anestlogo}
                 alt='Anest Iwata'
-                width={300}
-                height={300}
+                width={250}
+                height={250}
                 className='max-w-full h-auto'
               />
               <Image
                 src={kobelco}
                 alt='Kobelco'
-                width={300}
-                height={300}
+                width={250}
+                height={250}
                 className='max-w-full h-auto'
               />
             </div>

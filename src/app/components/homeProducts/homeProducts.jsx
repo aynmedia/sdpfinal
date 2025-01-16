@@ -36,7 +36,7 @@ const HomeProducts = () => {
       description:
         'Anest Iwata offers an extensive range of products covering the entire spectrum of paint coating equipment to meet varied requirements of its customers across different industries.',
       image: hero,
-      overlay: 'bg-[#001233]',
+      overlay: 'bg-[#001233',
     },
   ];
 

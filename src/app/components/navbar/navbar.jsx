@@ -53,7 +53,9 @@ const Navbar = () => {
 
   useEffect(() => {
     controls.start({
-      backgroundColor: isScrolled ? 'rgba(0, 18, 51, 1)' : 'rgba(0, 18, 51, 0)',
+      backgroundColor: isScrolled
+        ? 'rgba(255, 255, 255, 1)'
+        : 'rgba(255, 255, 255, 0)',
       transition: { duration: 0.3 },
     });
   }, [isScrolled, controls]);
@@ -85,7 +87,7 @@ const Navbar = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
   };
 
-  const textColorClass = isScrolled ? 'text-white' : 'text-primary';
+  const textColorClass = isScrolled ? 'text-primary' : 'text-white';
 
   const renderMegaMenu = () => (
     <motion.div
@@ -132,7 +134,7 @@ const Navbar = () => {
           onMouseEnter={handleMenuEnter}
           onMouseLeave={handleMenuLeave}
           className='relative group'>
-          <span className='flex items-center gap-1 px-3 py-2 rounded-md text-md font-bold hover:bg-blue-900 cursor-pointer'>
+          <span className='flex items-center gap-1 px-3 py-2 rounded-md text-md font-bold hover:bg-gray-600 cursor-pointer'>
             {item.label}
             <ChevronDown className='w-4 h-4' />
           </span>
@@ -153,7 +155,7 @@ const Navbar = () => {
                 href={link.href}
                 key={link.href}
                 onClick={handleSubMenuClick}>
-                <span className='block px-3 py-1.5 text-sm hover:bg-blue-900 rounded'>
+                <span className='block px-3 py-1.5 text-sm hover:bg-gray-300 rounded'>
                   {link.label}
                 </span>
               </Link>
@@ -169,8 +171,8 @@ const Navbar = () => {
           onClick={isMobile ? () => setMenuOpen(false) : undefined}
           className={`${
             isMobile
-              ? 'block px-3 py-2 rounded-md text-md font-bold hover:bg-blue-900'
-              : 'px-3 py-2 rounded-md text-md font-bold hover:bg-blue-900'
+              ? 'block px-3 py-2 rounded-md text-md font-bold hover:bg-gray-600'
+              : 'px-3 py-2 rounded-md text-md font-bold hover:bg-gray-600'
           }`}>
           {item.label}
         </span>
@@ -182,13 +184,13 @@ const Navbar = () => {
     <>
       <motion.nav
         animate={controls}
-        className={`fixed w-full z-20 ${textColorClass}`}>
+        className={`fixed w-full  shadow-sm z-20 ${textColorClass}`}>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex items-center justify-between h-32'>
+          <div className='flex items-center justify-between h-30'>
             <div className='flex items-center'>
               <Link href='/'>
                 <span className='text-xl font-bold'>
-                  <Image src={logo} alt='Logo' width={150} height={150} />
+                  <Image src={logo} alt='Logo' width={120} height={120} />
                 </span>
               </Link>
             </div>

@@ -54,7 +54,7 @@ export function Leading() {
       viewport={{ once: true, amount: 0.1 }}
       variants={containerVariants}>
       {/* Semi-transparent overlay */}
-      <div className='absolute inset-0 bg-white bg-opacity-90' />
+      <div className='absolute inset-0 bg-gray-300/50 bg-opacity-90' />
 
       {/* Content */}
       <div className='relative z-0 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 py-16 min-h-screen'>

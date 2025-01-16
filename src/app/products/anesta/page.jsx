@@ -115,7 +115,7 @@ const Anesta = () => {
                 className='text-4xl font-bold'
                 variants={fadeIn}></motion.h1>
               <motion.p
-                className='text-black/70 text-lg font-semibold'
+                className='text-black/70 text-md font-semibold'
                 variants={fadeIn}>
                 Innovation Meets Excellence. Explore cutting-edge solutions in
                 air compression, vacuum technology, and coating systems crafted

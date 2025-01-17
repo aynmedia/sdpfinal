@@ -1,101 +1,157 @@
 /** @format */
-'use client';
-import React from 'react';
-import { Hospital, Factory, Droplets, Fish, Tablets } from 'lucide-react';
-import { motion } from 'framer-motion';
 
-const ApplicationCard = ({ IconComponent, title, description }) => (
-  <div className='group relative overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-all hover:shadow-md'>
-    <div className='absolute -right-4 -top-4 h-24 w-24 rounded-full bg-sky-50 transition-transform group-hover:scale-110' />
-    <div className='relative'>
-      <div className='mb-4 inline-block rounded-lg bg-sky-100 p-3'>
-        <IconComponent className='h-6 w-6 text-sky-600' />
+import React, { useState, useEffect, useRef } from 'react';
+import { Cpu, Factory, Droplets, Tablets, Pizza } from 'lucide-react';
+import oil from '@/../public/images/nitrogen/oil.jpg';
+import lasercutting from '@/../public/images/nitrogen/lasercutting.jpg';
+import electronic from '@/../public/images/nitrogen/electronic.jpg';
+import pharmaceuticals from '@/../public/images/nitrogen/pharmaceuticals.jpg';
+import foodpack from '@/../public/images/nitrogen/foodpack.jpg';
+
+import Image from 'next/image';
+const ApplicationCard = ({
+  IconComponent,
+  title,
+  description,
+  imageUrl,
+  index,
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={cardRef}
+      className={`relative w-full h-64 transition-all duration-700 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+      style={{
+        transitionDelay: `${index * 100}ms`,
+        transformStyle: 'preserve-3d',
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}>
+      <div
+        className={`relative w-full h-full transition-transform duration-500 ${
+          isHovered ? 'scale-105' : 'scale-100'
+        }`}
+        style={{
+          transform: isHovered ? 'rotateY(180deg)' : 'rotateY(0)',
+          transformStyle: 'preserve-3d',
+        }}>
+        {/* Front of card */}
+        <div
+          className='absolute w-full h-full backface-hidden bg-white rounded-lg shadow-sm cursor-pointer'
+          style={{ backfaceVisibility: 'hidden' }}>
+          <div className='flex flex-col items-center justify-center h-full p-6 space-y-4'>
+            <IconComponent className='w-12 h-12 text-blue-600' />
+            <h3 className='text-lg font-semibold text-center'>{title}</h3>
+            <p className='text-sm text-center text-gray-600'>{description}</p>
+          </div>
+        </div>
+
+        {/* Back of card */}
+        <div
+          className='absolute w-full h-full rounded-lg overflow-hidden'
+          style={{
+            backfaceVisibility: 'hidden',
+            transform: 'rotateY(180deg)',
+          }}>
+          <Image
+            src={imageUrl || '/api/placeholder/256/256'}
+            alt={title}
+            objectFit='cover'
+            className='w-full h-full'
+            fill
+          />
+        </div>
       </div>
-      <h3 className='mb-2 text-lg font-semibold text-gray-900'>{title}</h3>
-      <p className='text-gray-600/80'>{description}</p>
     </div>
-  </div>
-);
+  );
+};
 
 const ApplicationsSection = () => {
   const applications = [
     {
-      IconComponent: Hospital,
-      title: 'Healthcare',
+      IconComponent: Droplets,
+      title: 'Oil and Gas',
       description:
-        'Medical oxygen supply for hospitals, clinics, and emergency care facilities, ensuring reliable access to life-saving oxygen.',
+        'Purging and blanketing to prevent combustion and contamination in storage and processing facilities.',
+      imageUrl: oil,
     },
     {
       IconComponent: Factory,
-      title: 'Manufacturing',
+      title: 'Laser Cutting',
       description:
-        'Essential oxygen supply for cutting, welding, and various industrial processes that require precise oxygen levels.',
+        'Providing high-purity nitrogen for precise and oxidation-free laser cutting processes.',
+      imageUrl: lasercutting,
     },
     {
-      IconComponent: Droplets,
-      title: 'Water Treatment',
+      IconComponent: Cpu,
+      title: 'Electronics Manufacturing',
       description:
-        'Oxygen enrichment solutions for wastewater treatment, helping maintain environmental compliance and efficiency.',
-    },
-    {
-      IconComponent: Fish,
-      title: 'Aquaculture',
-      description:
-        'Maintaining optimal oxygen levels for aquatic farming, ensuring healthy growth and sustainable production.',
+        'Creating inert atmospheres for soldering and assembly processes to prevent oxidation.',
+      imageUrl: electronic,
     },
     {
       IconComponent: Tablets,
       title: 'Pharmaceuticals',
       description:
-        'High-purity oxygen generation for pharmaceutical research, development, and production processes.',
+        'Maintaining controlled environments for production and packaging to ensure product integrity.',
+      imageUrl: pharmaceuticals,
+    },
+    {
+      IconComponent: Pizza,
+      title: 'Food and Beverage Packaging',
+      description:
+        'Ensuring product freshness and extending shelf life through modified atmosphere packaging.',
+      imageUrl: foodpack,
     },
   ];
 
   return (
-    <section className='bg-gray-50 py-16'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <div className='py-12 px-4'>
+      <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
           <h2 className='text-3xl font-bold mb-4'>Applications</h2>
-          <p className='text-gray-600 max-w-2xl mx-auto'>
-            Our oxygen generators are designed for a wide range of industrial
-            and medical applications, delivering reliable and efficient oxygen
-            supply wherever it's needed.
+          <p className='text-lg text-gray-600'>
+            Our nitrogen generators are suitable for a wide range of
+            applications, including:
           </p>
         </div>
 
-        <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center'>
           {applications.map((app, index) => (
-            <motion.div
-              key={app.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  duration: 0.5,
-                  delay: index * 0.1,
-                },
-              }}
-              viewport={{ once: true }}>
-              <ApplicationCard {...app} />
-            </motion.div>
+            <ApplicationCard key={index} {...app} index={index} />
           ))}
         </div>
 
-        <div className='mt-12 text-center'>
-          <button className='inline-flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 text-white transition-colors hover:bg-green-700'>
+        <div className='text-center mt-12'>
+          <button className='px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'>
             Learn More About Our Applications
-            <svg className='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'>
-              <path
-                fillRule='evenodd'
-                d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
-                clipRule='evenodd'
-              />
-            </svg>
           </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

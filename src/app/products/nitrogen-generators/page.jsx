@@ -2,16 +2,16 @@
 
 'use client';
 import React from 'react';
-import OxygenBubbles from './oxygen';
 import { motion } from 'framer-motion';
-import oxygen from '@/../public/images/oxygen.png';
 import Button from '@/app/components/ui/button/button';
 import Image from 'next/image';
 import { Dot } from 'lucide-react';
 import ApplicationsSection from './application';
 import Products from './products';
-import family from '@/../public/images/family.jpg';
+import nitro from '@/../public/images/nitro.jpg';
 import NavigationBar from '@/app/components/explore/explore';
+import SmokeEffect from './nitrogen';
+
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -55,17 +55,11 @@ const Page = () => {
     <div className='min-h-screen'>
       <section className='relative min-h-screen'>
         <div className='absolute inset-0 w-full h-full'>
-          <Image
-            src={family}
-            alt='background'
-            layout='fill'
-            objectFit='cover'
-          />
+          <Image src={nitro} alt='background' layout='fill' objectFit='cover' />
         </div>
-        <div className='absolute inset-0 bg-gradient-to-b from-transparent to-[#001233] ' />
-        <OxygenBubbles />
+        <div className='absolute inset-0 bg-gradient-to-b from-transparent to-[#001233]' />
+        <SmokeEffect />
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-          {' '}
           <motion.div
             className='grid md:grid-cols-2 gap-8 items-center'
             variants={staggerContainer}
@@ -74,39 +68,29 @@ const Page = () => {
             viewport={{ once: true, margin: '-100px' }}>
             <motion.div
               variants={slideIn}
-              className='space-y-6 flex flex-col justify-center min-h-screen '>
+              className='space-y-6 flex flex-col justify-center min-h-screen'>
               <motion.h1
                 variants={fadeIn}
                 className='text-4xl font-bold text-white'>
-                Oxygen Generators
+                Nitrogen Generators
               </motion.h1>
               <motion.p
                 variants={fadeIn}
                 className='text-white/80 font-semibold'>
-                Innovation Meets Excellence. Explore cutting-edge solutions in
-                air compression, vacuum technology, and coating systems crafted
-                to optimize productivity across industries. Trust Anest Iwata
-                for precision-driven results.
+                Discover advanced nitrogen generation solutions tailored for
+                industries demanding high-purity, on-site nitrogen. SD
+                Pneumatics delivers reliability, efficiency, and cost savings in
+                every system.
               </motion.p>
               <motion.div variants={fadeIn}>
-                <Button
-                  color='white'
-                  text='Contact Us'
-                  link='https://www.google.com'
-                />
+                <Button color='white' text='Contact Us' link='/contact-us' />
               </motion.div>
             </motion.div>
 
             <motion.div
               variants={scaleIn}
               className='flex items-center justify-center'>
-              {/* <Image
-                src={oxygen}
-                alt='Oxygen Generator'
-                width={900}
-                height={900}
-                className='max-w-full h-auto'
-              /> */}
+              {/* Optional: Add product image */}
             </motion.div>
           </motion.div>
         </div>
@@ -116,35 +100,31 @@ const Page = () => {
       <section className='pt-16 pb-4'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='text-4xl font-bold mb-6'>
-            Reliable On-Site Oxygen Solutions for Every Industry
+            On-Site Nitrogen Solutions Tailored for Your Needs
           </h1>
-          <p className='leading-relaxed '>
-            At SD Pneumatics, we offer state-of-the-art oxygen generators
-            designed to meet diverse industrial and medical application needs.
-            Our cutting-edge systems ensure a consistent and eco-friendly supply
-            of high-purity oxygen, eliminating reliance on external deliveries
-            and enhancing operational efficiency.
+          <p className='leading-relaxed'>
+            SD Pneumatics specializes in providing cutting-edge nitrogen
+            generators that offer reliable, cost-effective, and energy-efficient
+            on-site nitrogen production. Designed for diverse industries, our
+            systems eliminate the need for conventional nitrogen supply methods,
+            ensuring a continuous and sustainable source of nitrogen.
           </p>
         </div>
       </section>
 
-      <section className=' bg-gray-50'>
+      <section className='bg-gray-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid md:grid-cols-2 gap-8'>
             <div className='bg-white rounded-lg p-8 shadow-sm'>
               <h2 className='text-2xl font-semibold mb-6'>
-                Our Oxygen Generator Technologies
+                Advanced Nitrogen Generation Technologies
               </h2>
-              <p className='mb-6'>
-                We provide a range of advanced oxygen generation technologies to
-                suit specific requirements:
-              </p>
               <ul className='space-y-4'>
                 {[
-                  'PSA Oxygen Generators: Proven technology delivering oxygen with 93±3% purity, ideal for various industries.',
-                  'Modular PSA Generators: Scalable and compact systems for flexible and space-efficient operations.',
-                  'DS-PSA Oxygen Generators: Dual-stage systems ensuring superior energy efficiency and reliability.',
-                  'V-PSA Oxygen Solutions: Advanced vacuum-enhanced PSA technology for optimized performance and reduced operational costs.',
+                  'PSA Nitrogen Generators: High-purity nitrogen production through proven Pressure Swing Adsorption technology.',
+                  'Membrane Nitrogen Generators: Compact systems utilizing membrane separation for flexible, on-demand nitrogen generation.',
+                  'Modular PSA Generators: Scalable and space-efficient solutions for industrial applications.',
+                  'Custom Nitrogen Solutions: Tailored systems designed to meet specific purity and flow rate requirements.',
                 ].map((text, index) => (
                   <li key={index} className='flex items-start'>
                     <Dot className='h-12 w-12 mt-1 flex-shrink-0 text-primary' />
@@ -156,14 +136,15 @@ const Page = () => {
 
             <div className='bg-white rounded-lg p-8 shadow-sm'>
               <h2 className='text-2xl font-semibold mb-6'>
-                Why Choose SD Pneumatics Oxygen Generators?
+                Why Choose SD Pneumatics Nitrogen Generators?
               </h2>
               <ul className='space-y-4'>
                 {[
-                  'On-Demand Oxygen Production: Generate oxygen as needed, reducing dependency on high-pressure cylinders or liquid oxygen deliveries.',
-                  'Energy Efficiency: Our optimized PSA process ensures an excellent compressed air-to-oxygen ratio, minimizing energy consumption.',
-                  'Cost Savings: No recurring logistics costs, faster ROI, and reduced oxygen waste.',
-                  'Enhanced Safety: No large-scale oxygen storage required, lowering associated risks.',
+                  'Continuous, On-Demand Nitrogen Supply: Eliminate the need for cylinder storage or liquid nitrogen deliveries.',
+                  'Energy Efficiency: Advanced systems ensure optimal compressed air-to-nitrogen ratios for reduced operational costs.',
+                  'Eco-Friendly Operations: Minimize environmental impact with sustainable, on-site nitrogen generation.',
+                  'Cost Savings: Avoid logistics expenses and reduce nitrogen waste for faster ROI.',
+                  'Flexible and Reliable: Systems tailored to meet the specific demands of your industry and applications.',
                 ].map((text, index) => (
                   <li key={index} className='flex items-start'>
                     <Dot className='h-12 w-12 mt-1 flex-shrink-0 text-primary' />

@@ -1,13 +1,14 @@
 /** @format */
 
 import React from 'react';
-import modpsa from '@/../public/images/nitrogen/modpsa.png';
 import psa from '@/../public/images/nitrogen/psa.jpg';
 import membrane from '@/../public/images/nitrogen/membrane.png';
 import food from '@/../public/images/nitrogen/food.jpg';
 import compact from '@/../public/images/nitrogen/compact.jpg';
 import plug from '@/../public/images/nitrogen/plug.png';
 import laser from '@/../public/images/nitrogen/laser.png';
+import modpsa from '@/../public/images/nitrogen/modpsa.png';
+
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Button from '@/app/components/ui/button/button';
@@ -16,54 +17,52 @@ import { Download } from 'lucide-react';
 const productData = [
   {
     id: 1,
-    title:
-      'PSA Twin Tower oxygen generators for medium to high fuel consumption',
+    title: 'Modular PSA Nitrogen Generator',
     description:
-      'The ideal solution where larger oxygen consumptions apply. Built to last for years of trouble-free continuous heavy-duty operation at low operational costs.',
+      'NITROSWING® is NOVAIRs new generation of modular PSA nitrogen generators offering highest standards in the market for efficiency, flexibility and reliability.',
     image: modpsa,
   },
   {
     id: 2,
-    title: 'Modular PSA Oxygen Generators',
+    title: 'PSA Nitrogen Generators',
     description:
-      'A range of generators providing users with unique flexibility: thanks to the addition of independent PSA modules, the capacity of the equipment can be very easily increased.',
+      'Novair designed a high efficiency PSA nitrogen generator, NITROPLUS. With a wide range of capacities and varied purity levels, NITROPLUS meets the needs of all types of industries, with increased profitability.',
     image: psa,
   },
   {
     id: 3,
-    title: 'DS-PSA Oxygen Generator: Very High Purity Oxygen produced on site',
+    title: 'Nitrogen for Laser Cutting',
     description:
-      'A new generation of oxygen generator applying a unique and patented technology. Based on a two-stage molecular separation process, the DS-PSA removes nitrogen, argon and traces of pollutants remaining after the first stage. This technology allows to obtain an ultra high purity oxygen (up to 99,5%). In addition, the OCS patented system ensures an exceptional stability of O2 purity, at +/- 0,2%.',
+      'Result of the collaboration with industrial users, NOVAIR designed the NITROSWING LASERPACK, an autonomous supply solution of nitrogen suited to all types of cutting machines.',
     image: laser,
   },
   {
     id: 4,
-    title: 'Mobile Oxygen Generators',
+    title: 'Membrane Nitrogen Generator',
     description:
-      'Forget high pressure cylinders and liquid oxygen deliveries, NOVAIR has designed ModulO2, a compact, mobile and featured with a friendly use system oxygen generator.',
+      'Membrane generators particularly suitable for applications not requiring a high purity of nitrogen or in case where nitrogen must be produced under extreme environmental conditions in remote locations.',
     image: membrane,
   },
   {
     id: 5,
-    title:
-      'VPSA Oxygen Generator: high energy efficiency for the highest consumption',
+    title: 'Nitrogen in Food Packaging',
     description:
-      'For applications needing particularly high oxygen flows, NOVAIR introduces a new range of V-PSA solutions. Thanks to a low power consumption, the V-PSA technology allows a drastic reduction of oxygen production costs.',
+      'In order to offer constantly some innovative solutions for food industry, NOVAIR designed the Nitroswing Foodpack for all Modiﬁed Atmosphere Packaging applications.',
     image: food,
   },
   {
     id: 6,
-    title: 'Oxygen cylinder filling',
+    title: 'Plug&Play Container NITROFACTORY',
     description:
-      'we offers a full range of high pressure oxygen cylinder filling systems with a filling capacity of up to 100 cylinders per day.',
-    image: compact,
+      'With NOVAIRs production cabinets, you can have an autonomous technical room dedicated to nitrogen production, without changing the internal structure of your establishment.',
+    image: plug,
   },
   {
     id: 7,
     title: 'Plug&Play Container OXYFACTORY',
     description:
-      'We Industries presents OXYFACTORY, a turnkey solution that includes both autonomous oxygen production and cylinders filling.',
-    image: plug,
+      'ModulN2 is a membrane nitrogen compact generator all-included NOVAIR and is a perfect alternative for industrials looking for a sure, economical, pratice and reliable nitrogen supply.',
+    image: compact,
   },
 ];
 

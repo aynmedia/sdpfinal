@@ -125,7 +125,7 @@ export default function LatestPostsWidget() {
   return (
     <div className='bg-white text-primary px-4 py-16'>
       <div className='max-w-7xl mx-auto'>
-        {/* <h2 className='text-4xl font-bold mb-12 text-center'>Latest Posts</h2> */}
+        <h1 className='text-4xl font-bold mb-12 text-center'>News & Updates</h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
           {posts.map((post) => (
             <Link

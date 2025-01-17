@@ -201,9 +201,9 @@ function PostCard({ post }) {
           />
         </div>
         <div className='flex-1 p-6'>
-          <h2 className='text-xl font-medium text-gray-800 hover:text-green-600 transition-colors mb-2'>
+          <h1 className='text-xl font-medium text-gray-800 hover:text-green-600 transition-colors mb-2'>
             {post.title}
-          </h2>
+          </h1>
           <p className='text-gray-600 mb-4'>{post.excerpt}</p>
           {/* <div className='flex items-center text-green-600 font-medium group'>
               READ MORE

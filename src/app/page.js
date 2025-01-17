@@ -9,6 +9,7 @@ import Presence from './components/presence/presence';
 import LatestPostsWidget from './components/recentblogs/reacentblogs';
 import Herosection from './components/herosection/herosection';
 import Services from './components/services/services';
+import Awards from './components/awards/awards';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <HomeProducts />
       <Presence />
       <Services />
+      <Awards />
       <LatestPostsWidget />
     </>
   );

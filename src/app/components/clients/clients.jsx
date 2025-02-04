@@ -114,12 +114,14 @@ const Clients = () => {
     <div className='text-primary py-12'>
       <div className='max-w-7xl mx-auto text-center my-6'>
         {' '}
-        <h1 className='text-2xl font-semibold mt-2'>Industrial Applications</h1>
-        <h2 className='text-md  max-w-4xl mx-auto my-2'>
+        <h1 className='text-2xl font-semibold mt-2'>
+          Some of our Valuable Clients
+        </h1>
+        {/* <h2 className='text-md  max-w-4xl mx-auto my-2'>
           With a strong foundation in global expertise, we provide trusted
           solutions that cater to diverse industries, consistently delivering
           exceptional performance and groundbreaking innovation worldwide.
-        </h2>
+        </h2> */}
       </div>
       <div className='relative flex h-[200px] w-full flex-col items-center justify-center overflow-hidden'>
         <Marquee pauseOnHover className='[--duration:60s]'>

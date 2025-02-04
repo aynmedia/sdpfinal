@@ -21,7 +21,7 @@ import als from '@/../public/images/clients/als.png';
 import confident from '@/../public/images/clients/confident.png';
 import bioneeds from '@/../public/images/clients/bioneeds.png';
 import hal from '@/../public/images/clients/hal.jpeg';
-import jindal from '@/../public/images/clients/jindal.jpeg';
+import jindal from '@/../public/images/clients/jindal.png';
 
 import Image from 'next/image';
 import { cn } from '@/lib/utils';

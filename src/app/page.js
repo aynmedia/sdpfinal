@@ -10,6 +10,7 @@ import LatestPostsWidget from './components/recentblogs/reacentblogs';
 import Herosection from './components/herosection/herosection';
 import Services from './components/services/services';
 import Awards from './components/awards/awards';
+import Clients from './components/clients/clients';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Presence />
       <Services />
       <Awards />
+      <Clients />
       <LatestPostsWidget />
     </>
   );

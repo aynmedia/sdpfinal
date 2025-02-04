@@ -143,14 +143,14 @@ export default function LatestPostsWidget() {
                       ? 'opacity-100 translate-y-0'
                       : 'opacity-0 translate-y-10'
                   }
-                  hover:shadow-2xl
+                  
                 `}>
                 <div className='relative w-full h-80 rounded-xl'>
                   <Image
                     src={post.featuredImage}
                     alt={post.title}
                     fill
-                    className='object-cover rounded-xl'
+                    className='object-cover rounded-md'
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw '
                     priority={false}
                   />

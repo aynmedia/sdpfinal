@@ -15,7 +15,7 @@ const awards = [
   },
   {
     title: 'Excellence in Education',
-    year: 2022,
+    year: 2024,
     description:
       'Awarded for significant contributions to education and learning.',
     image: award2,

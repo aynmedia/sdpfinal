@@ -104,7 +104,7 @@ const ReviewCard = ({ image, category, username, body }) => {
 };
 const Presence = () => {
   return (
-    <div className='bg-[#06091B] text-white py-12'>
+    <div className='text-[#06091B] bg-white py-12'>
       <div className='max-w-7xl mx-auto text-center my-6'>
         {' '}
         <h1 className='text-2xl font-semibold mt-2'>Industrial Applications</h1>

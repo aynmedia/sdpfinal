@@ -21,7 +21,7 @@ const Herosection = () => {
         objectFit='cover'
         className='absolute top-0 left-0 w-full h-full z-[-1]'
       />
-      <div className='absolute inset-0 bg-white opacity-20 z-[-1]' />
+      <div className='absolute inset-0 bg-white/10 z-[-1]' />
       {/* Particles Background */}
       <ParticlesBackground />
 
@@ -29,7 +29,7 @@ const Herosection = () => {
       <div className='absolute inset-0 grid md:grid-cols-2 gap-0'>
         {/* Left Content */}
         <motion.div
-          className='flex flex-col justify-center md:pl-24 px-6 gap-6 col-span-1'
+          className='flex flex-col justify-center md:pl-24 px-6 gap-6 col-span-1 w-full'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}>
@@ -61,7 +61,7 @@ const Herosection = () => {
             />
           </motion.div>
 
-          <div className='flex flex-col gap-2'>
+          {/* <div className='flex flex-col gap-2'>
             <h1 className='text-primary text-3xl font-normal mb-6'>
               Authorized Dealers of
             </h1>
@@ -81,15 +81,37 @@ const Herosection = () => {
                 className='max-w-full h-auto'
               />
             </div>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Right Content */}
         <motion.div
-          className='flex flex-col justify-center col-span-1 relative'
+          className='flex flex-col justify-end items-center col-span-1 relative'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}></motion.div>
+          transition={{ duration: 0.5, delay: 0.3 }}>
+          <div className='flex flex-col gap-2 mb-12'>
+            <h1 className='text-black text-2xl font-normal mb-2'>
+              Authorized Dealers of
+            </h1>
+            <div className=' rounded-lg p-4 shadow-sm w-fit flex gap-6 bg-white '>
+              <Image
+                src={anestlogo}
+                alt='Anest Iwata'
+                width={150}
+                height={150}
+                className='max-w-full h-auto'
+              />
+              <Image
+                src={kobelco}
+                alt='Kobelco'
+                width={150}
+                height={150}
+                className='max-w-full h-auto'
+              />
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

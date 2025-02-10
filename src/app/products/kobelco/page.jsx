@@ -170,7 +170,7 @@ const Kobelco = () => {
             </div>
           </motion.div>
 
-          <div className='bg-[#001233] text-white'>
+          <div className='bg-[#06091B] text-white'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 max-w-7xl mx-auto my-4'>
               <div className='space-y-4 flex flex-col justify-center py-12'>
                 <h1 className='text-3xl font-bold tracking-tight'>Overview</h1>

@@ -33,6 +33,12 @@ const HomeProducts = () => {
       link: '/products/nitrogen-generators',
     },
     {
+      title: 'Spare Parts',
+      description:
+        'Nitrogen generators deliver pure, dry nitrogen gas suitable for a wide range of industrial and commercial applications, ensuring efficiency and reliability.',
+      link: '/products/nitrogen-generators',
+    },
+    {
       title: 'Others',
       description:
         'SD Pneumatics offers an extensive range of products covering the entire spectrum of paint coating equipment to meet varied requirements of its customers across different industries.',
@@ -67,7 +73,7 @@ const HomeProducts = () => {
           {products.map((product, index) => (
             <motion.div
               key={index}
-              className='relative bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden group cursor-pointer'
+              className='relative bg-white/80 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden group cursor-pointer text-white'
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -75,7 +81,7 @@ const HomeProducts = () => {
               {/* Card Content */}
               <Link href={product.link}>
                 <div className='p-6'>
-                  <h1 className='text-2xl font-semibold text-[#001233] group-hover:text-[#0056b3] transition-colors duration-300'>
+                  <h1 className='text-2xl font-semibold text-[#001233] group-hover:text-[#5039bf] transition-colors duration-300'>
                     {product.title}
                   </h1>
                   <p className='text-gray-600 mt-3 text-sm leading-relaxed group-hover:text-gray-800 transition-colors duration-300'>

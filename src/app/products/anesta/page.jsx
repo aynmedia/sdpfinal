@@ -89,7 +89,7 @@ const Anesta = () => {
             <source src='/images/bg.mp4' type='video/mp4' />
             Your browser does not support the video tag.
           </video>
-          <div className='absolute inset-0 bg-gradient-to-b from-gray-100/70 to-gray-100/70'></div>
+          <div className='absolute inset-0 bg-gradient-to-b from-[#06091B] to-gray-100/20'></div>
         </motion.div>
       </div>
 
@@ -115,7 +115,7 @@ const Anesta = () => {
                 className='text-4xl font-bold'
                 variants={fadeIn}></motion.h1>
               <motion.p
-                className='text-black/70 text-md font-semibold'
+                className='text-white/90 text-md font-semibold'
                 variants={fadeIn}>
                 Innovation Meets Excellence. Explore cutting-edge solutions in
                 air compression, vacuum technology, and coating systems crafted
@@ -174,39 +174,28 @@ const Anesta = () => {
             </div>
           </motion.div>
 
-          <div className='bg-[#f4f4f4] text-primary'>
+          <div className='bg-[#06091B] text-white'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 max-w-7xl mx-auto my-4'>
               <div className='space-y-4 flex flex-col justify-center'>
                 <h1 className='text-3xl font-bold tracking-tight'>Overview</h1>
                 <p className='leading-normal'>
-                  Anest Iwata, a global leader in air compressors, vacuum pumps,
-                  and coating equipment, is renowned for its innovative and
-                  energy-efficient solutions. The company offers a comprehensive
-                  range of products, including oil-free and lubricated air
-                  compressors, high-performance vacuum pumps, and
-                  precision-engineered spray guns. These products are
-                  meticulously designed to meet the diverse needs of industries
-                  such as automotive, healthcare, food and beverage,
-                  electronics, and general manufacturing. With a focus on
-                  sustainability, Anest Iwata incorporates eco-friendly
-                  technologies to minimize environmental impact while delivering
-                  exceptional performance.
+                  Anest Iwata is a global leader in air compressors, vacuum
+                  pumps, and coating equipment, delivering innovative,
+                  energy-efficient solutions. Its range includes oil-free and
+                  lubricated compressors, high-performance vacuum pumps, and
+                  precision spray guns, catering to industries like automotive,
+                  healthcare, food & beverage, electronics, and manufacturing.
                 </p>
                 <p className='leading-normal'>
-                  The company's commitment to quality and reliability is evident
-                  in its advanced engineering and rigorous testing standards.
-                  Anest Iwata’s solutions are widely recognized for their
-                  precision, durability, and cost-effectiveness, making them a
-                  preferred choice for businesses worldwide. From enhancing
-                  productivity in industrial operations to supporting critical
-                  applications in healthcare and electronics, Anest Iwata’s
-                  products are at the forefront of technological innovation,
-                  empowering industries to achieve higher efficiency and
-                  sustainability.
+                  With a focus on quality and sustainability, Anest Iwata
+                  integrates advanced engineering and eco-friendly technologies
+                  to ensure reliability, durability, and efficiency. Trusted
+                  worldwide, its solutions enhance productivity and support
+                  critical applications across industries.
                 </p>
               </div>
               <div className='flex justify-center items-center py-4'>
-                <Image src={motor} alt='anesta' width={600} height={600} />
+                <Image src={motor} alt='anesta' width={400} height={400} />
               </div>
             </div>
           </div>

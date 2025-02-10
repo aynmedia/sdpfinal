@@ -105,10 +105,10 @@ const HomeAbout = () => {
               {heroStats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className='bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300'
+                  className='bg-white rounded-md p-6 shadow-md hover:shadow-xl transition-shadow duration-300'
                   whileHover={{ y: -5 }}
                   transition={{ duration: 0.2 }}>
-                  <div className='text-4xl font-bold text-green-600 mb-2'>
+                  <div className='text-4xl font-bold text-[#06091B] mb-2'>
                     {stat.number}
                   </div>
                   <div className='text-lg font-semibold text-gray-900 mb-1'>

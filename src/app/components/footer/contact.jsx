@@ -110,30 +110,37 @@ const ContactSection = () => {
 
             <div className='space-y-6'>
               <div>
-                <h2 className='text-xl font-semibold mb-2'>India</h2>
+                <h2 className='text-xl font-semibold mb-2'>Head Office</h2>
                 <p className='text-gray-400'>
-                  456, 4th Main Rd, Manjunath Nagar, Basaveshwar Nagar,
-                  <br />
+                  # 456, 4th Main Road, 1st Stage 2nd Phase,
+                  <br /> Manjunath Nagar, Rajaji Nagar, <br />
                   Bengaluru, Karnataka 560010
                 </p>
-              </div>
-
-              <div>
-                <h2 className='text-xl font-semibold mb-2'>Phone</h2>
-                <p className='text-green-500 hover:text-red-400 transition-colors'>
-                  +91 99865 23331
+                <p className='text-gray-400'>
+                  sdpn2014@gmail.com
                   <br />
+                  9986523331 | 9900726662
                 </p>
               </div>
 
               <div>
-                <h2 className='text-xl font-semibold mb-2'>Email</h2>
-                <p>Interested in working with us?</p>
-                <a
-                  href='mailto:support@consultum.com'
-                  className='text-green-500 hover:text-red-400 transition-colors'>
-                  care@sdpneumatics.in
-                </a>
+                <h2 className='text-xl font-semibold mb-2'>Branch Office</h2>
+                <p className='text-gray-400'>
+                  Sumuka Arcade Neae Geeta Seva <br />
+                  Asharama Bellary Road, Hospet <br />
+                  Karnataka - 583201
+                </p>
+                <p className='text-gray-400'>
+                  sdpn2014@gmail.com
+                  <br />
+                  9986523331 | 9980673338
+                </p>
+              </div>
+
+              <div>
+                <h2 className='text-xl font-semibold mb-2'>GSTIN</h2>
+
+                <p>29AELPG4572Q1ZO</p>
               </div>
 
               <div>
@@ -244,8 +251,8 @@ const ContactSection = () => {
               <button
                 type='submit'
                 disabled={isSubmitting}
-                className='w-full bg-red-500 text-white py-3 px-6 rounded-md 
-                         hover:bg-red-600 transition-colors duration-300 
+                className='w-full bg-[#5039bf] text-white py-3 px-6 rounded-md 
+                         hover:bg-[#3e27a5] transition-colors duration-300 
                          font-medium disabled:opacity-50 disabled:cursor-not-allowed'>
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>

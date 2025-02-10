@@ -16,13 +16,13 @@ const Footer = () => {
   };
 
   return (
-    <footer className='bg-[#001233] text-white pt-16 pb-8'>
+    <footer className='bg-[#06091B] text-white pt-16 pb-8'>
       <div className='min-h-screen'>
         <ContactSection />
       </div>
 
       <div className='max-w-7xl mx-auto px-4 pt-12'>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-12'>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-12'>
           {/* Company Info */}
           <motion.div
             initial='initial'
@@ -30,7 +30,7 @@ const Footer = () => {
             viewport={{ once: true }}
             variants={fadeInUp}>
             <Image src={logo} alt='Logo' width={100} height={100} />
-            <p className='text-gray-300 mb-6'>
+            <p className='text-gray-300 my-6'>
               Dedicated to providing high-quality pneumatic solutions that drive
               efficiency and innovation across industries.
             </p>
@@ -46,16 +46,46 @@ const Footer = () => {
               What we are dealing with
             </h3>
             <ul className='space-y-4'>
-              {['Anesta Iwata', 'Kobelco', 'Oxygen Generators', 'Others'].map(
-                (service, index) => (
-                  <li key={index} className='text-gray-300'>
-                    {service}
-                  </li>
-                )
-              )}
+              {[
+                'Anesta Iwata',
+                'Kobelco',
+                'Oxygen Generators',
+                'Spare Parts',
+                'Others',
+                'Air Compressors',
+                'Vacuum Pumps',
+              ].map((service, index) => (
+                <li key={index} className='text-gray-300'>
+                  {service}
+                </li>
+              ))}
             </ul>
           </motion.div>
-
+          {/* What we do */}
+          <motion.div
+            initial='initial'
+            whileInView='animate'
+            viewport={{ once: true }}
+            variants={fadeInUp}>
+            {/* <h3 className='text-xl font-semibold mb-6'>
+              What we are dealing with
+            </h3> */}
+            <ul className='space-y-4'>
+              {[
+                'Auto Drain Valves',
+                'Air Dryers',
+                'Air Receivers Tanks',
+                'Pressure Gauges',
+                'AMC for Compressor Air Dryers',
+                'All Make Air Compressor Spare Parts',
+                'Air Receiver Tank, LPG, CO2 Tank & Safety Valve Testing',
+              ].map((service, index) => (
+                <li key={index} className='text-gray-300'>
+                  {service}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
           {/* Offices */}
           <motion.div
             initial='initial'

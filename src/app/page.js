@@ -11,18 +11,19 @@ import Herosection from './components/herosection/herosection';
 import Services from './components/services/services';
 import Awards from './components/awards/awards';
 import Clients from './components/clients/clients';
+import MarqueeText from './components/marquee/marquee';
 
 export default function Home() {
   return (
     <>
       <Herosection />
-      <Calltoaction />
+      <Calltoaction /> <MarqueeText />
       <Leading />
       <HomeAbout />
       <HomeProducts />
       <Presence />
       <Services />
-      <Awards />
+      {/* <Awards /> */}
       <Clients />
       <LatestPostsWidget />
     </>

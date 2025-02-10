@@ -45,7 +45,7 @@ export function Leading() {
 
   return (
     <motion.div
-      className='relative min-h-screen bg-fixed bg-cover bg-center'
+      className='relative'
       // style={{
       //   backgroundImage: `url(${bg.src})`,
       // }}
@@ -57,7 +57,7 @@ export function Leading() {
       <div className='absolute inset-0 bg-gray-300/50 bg-opacity-90' />
 
       {/* Content */}
-      <div className='relative z-0 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 py-16 min-h-screen'>
+      <div className='relative z-0 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 py-2 '>
         <motion.div
           className='md:mt-12 flex flex-1 flex-col justify-center gap-6 px-4 md:px-8'
           variants={itemVariants}>

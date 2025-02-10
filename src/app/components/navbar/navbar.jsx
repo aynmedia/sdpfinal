@@ -53,9 +53,7 @@ const Navbar = () => {
 
   useEffect(() => {
     controls.start({
-      backgroundColor: isScrolled
-        ? 'rgba(255, 255, 255, 1)'
-        : 'rgba(255, 255, 255, 0)',
+      backgroundColor: isScrolled ? 'rgba(6, 9, 27, 1)' : 'rgba(6, 9, 27, 0)',
       transition: { duration: 0.3 },
     });
   }, [isScrolled, controls]);
@@ -87,7 +85,7 @@ const Navbar = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
   };
 
-  const textColorClass = isScrolled ? 'text-primary' : 'text-white';
+  const textColorClass = isScrolled ? 'text-white' : 'text-white';
 
   const renderMegaMenu = () => (
     <motion.div
@@ -102,7 +100,7 @@ const Navbar = () => {
           {menuItems[1].megaMenuContent[0].links.map((link, index) => (
             <Link href={link.href} key={index} onClick={handleSubMenuClick}>
               <span className='block px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors'>
-                <span className='text-base text-gray-900 dark:text-white hover:text-slate-900 dark:hover:text-blue-500'>
+                <span className='text-md text-gray-900 dark:text-white hover:text-slate-900 dark:hover:text-blue-500'>
                   {link.label}
                 </span>
               </span>
@@ -134,7 +132,7 @@ const Navbar = () => {
           onMouseEnter={handleMenuEnter}
           onMouseLeave={handleMenuLeave}
           className='relative group'>
-          <span className='flex items-center gap-1 px-3 py-2 rounded-md text-md font-bold hover:bg-gray-600 cursor-pointer'>
+          <span className='flex items-center gap-1 px-3 py-2 rounded-md text-md font-bold hover:bg-[#5039bf] cursor-pointer'>
             {item.label}
             <ChevronDown className='w-4 h-4' />
           </span>
@@ -155,7 +153,7 @@ const Navbar = () => {
                 href={link.href}
                 key={link.href}
                 onClick={handleSubMenuClick}>
-                <span className='block px-3 py-1.5 text-sm hover:bg-gray-300 rounded'>
+                <span className='block px-3 py-1.5 text-sm hover:bg-[#5039bf] rounded'>
                   {link.label}
                 </span>
               </Link>
@@ -171,8 +169,8 @@ const Navbar = () => {
           onClick={isMobile ? () => setMenuOpen(false) : undefined}
           className={`${
             isMobile
-              ? 'block px-3 py-2 rounded-md text-md font-bold hover:bg-gray-600'
-              : 'px-3 py-2 rounded-md text-md font-bold hover:bg-gray-600'
+              ? 'block px-3 py-2 rounded-md text-md font-bold hover:bg-[#5039bf]'
+              : 'px-3 py-2 rounded-md text-md font-bold hover:bg-[#5039bf]'
           }`}>
           {item.label}
         </span>

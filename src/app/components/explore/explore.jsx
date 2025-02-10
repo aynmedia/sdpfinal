@@ -15,20 +15,20 @@ const NavigationBar = () => {
   ];
 
   return (
-    <nav className='w-full bg-[#001233] text-white'>
-      <div className='max-w-7xl mx-auto px-4'>
+    <nav className='w-full bg-[#06091B] text-white h-[96px]'>
+      <div className='max-w-7xl mx-auto px-4 h-full flex items-center'>
         {/* Desktop Navigation */}
         <ul className='hidden md:flex space-x-8 relative'>
           {navItems.map((item) => (
             <li key={item.title} className='relative'>
               <Link href={item.href}>
                 <span
-                  className={`text-lg font-normal hover:text-gray-200 transition-colors block py-4
+                  className={`text-xl font-normal hover:text-gray-200 transition-colors block py-4
                   ${pathname === item.href ? 'text-white' : 'text-gray-300'}`}>
                   {item.title}
                   {pathname === item.href && (
                     <span
-                      className='absolute top-0 left-0 right-0 h-1 bg-white'
+                      className='absolute -top-4 left-0 right-0 h-1 bg-white'
                       style={{ marginTop: '0' }}
                     />
                   )}

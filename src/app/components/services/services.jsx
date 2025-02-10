@@ -168,13 +168,13 @@ function NavigationSidebar({ activeTab, setActiveTab, isOpen, setIsOpen }) {
               }}
               className={`text-left px-6 py-12 border-l-4 hover:bg-gray-50 transition-colors ${
                 activeTab === index
-                  ? 'border-green-500 bg-[#F8F8F8] border-r-'
+                  ? 'border-[#06091B] bg-[#F8F8F8] border-r-'
                   : 'border-transparent'
               }`}>
               <span
                 className={`text-sm ${
                   activeTab === index
-                    ? 'text-green-600 font-medium'
+                    ? 'text-[#06091B] font-medium'
                     : 'text-gray-600'
                 }`}>
                 {section.title}

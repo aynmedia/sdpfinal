@@ -32,7 +32,7 @@ const page = async () => {
           objectFit='cover'
           className='absolute top-0 left-0 w-full h-full'
         />
-        <div className='absolute inset-0 bg-gradient-to-b from-white to-transparent flex items-center justify-center'>
+        <div className='absolute inset-0 bg-gradient-to-b from-[#06091B] to-transparent flex items-center justify-center'>
           <h1 className='text-white text-4xl font-bold'>Our Blog & Updates</h1>
         </div>
       </div>

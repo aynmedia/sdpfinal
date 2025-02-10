@@ -172,7 +172,7 @@ const ContactSection = () => {
             <h2 className='text-3xl font-bold text-gray-900 mb-6'>
               Get in Touch
             </h2>
-            <p className='text-gray-600 mb-8'>
+            <p className='text-gray-600 mb-8 text-sm'>
               Have a question or need assistance? We’re here to help! Whether
               you’re looking for expert advice, more information about our
               offerings, or simply want to connect, our team is ready to assist.

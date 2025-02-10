@@ -52,7 +52,7 @@ const HomeProducts = () => {
       <div
         className='absolute inset-0 bg-cover bg-fixed'
         style={{ backgroundImage: `url(${hero.src})` }}>
-        <div className='absolute inset-0 bg-black/30'></div>
+        <div className='absolute inset-0 bg-[#001233]/70'></div>
       </div>
 
       {/* Content */}

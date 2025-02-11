@@ -68,7 +68,7 @@ export default function LatestPostsWidget() {
       try {
         setLoading(true);
         const res = await fetch(
-          'https://sdpneumatics.in/backend/wp-json/wp/v2/posts?per_page=4&_embed'
+          'https://sdpneumatics.in/backend/wp-json/wp/v2/posts?per_page=3&_embed'
         );
 
         if (!res.ok) {
@@ -128,7 +128,7 @@ export default function LatestPostsWidget() {
         <h1 className='text-4xl font-bold mb-12 text-left'>
           Latest News from SD Pneumatics
         </h1>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {posts.map((post) => (
             <Link
               href={`/blogs/${post.slug}`}

@@ -12,7 +12,7 @@ const MarqueeText = () => {
           gradient
           gradientColor='#06091B'
           className='h-24 bg-[#06091B] text-white'>
-          <h1 className='text-xl font-medium'>
+          <h1 className='text-2xl font-medium'>
             • Auto Drain Valves • Air Dryers • Air Receivers Tanks • Pressure
             Gauges • AMC for Compressor Air Dryers • All Make Air Compressor
             Spare Parts • Air Receiver Tank, LPG, CO2 Tank & Safety Valve

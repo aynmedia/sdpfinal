@@ -52,13 +52,13 @@ const data = [
 
 const ReviewCard = ({ image }) => {
   return (
-    <div className={cn('flex justify-center items-center p-4')}>
+    <div className='group flex justify-center items-center p-4 transition-transform duration-300'>
       <Image
         src={image}
         width={150}
         height={150}
         alt='client-logo'
-        className='object-contain'
+        className='object-contain transform group-hover:scale-110 transition-transform duration-300'
       />
     </div>
   );
@@ -71,6 +71,10 @@ const Clients = () => {
         <h1 className='text-3xl font-semibold mt-2'>
           Proudly Trusted by Top Companies Worldwide
         </h1>
+        <p className='text-gray-500 mt-2'>
+          We take pride in collaborating with industry leaders across various
+          sectors, delivering excellence and building lasting relationships.
+        </p>
       </div>
       <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 max-w-7xl mx-auto px-4'>
         {data.map((data, index) => (

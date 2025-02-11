@@ -115,7 +115,7 @@ export default function LatestPostsWidget() {
         <p className='text-red-400'>Failed to load posts: {error}</p>
         <button
           onClick={() => window.location.reload()}
-          className='mt-4 px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors'>
+          className='mt-4 px-4 py-2 bg-[#5039bf] rounded-lg hover:bg-[#3e27a5]transition-colors'>
           Retry
         </button>
       </div>
@@ -125,9 +125,20 @@ export default function LatestPostsWidget() {
   return (
     <div className='bg-white text-primary px-4 py-16'>
       <div className='max-w-7xl mx-auto'>
-        <h1 className='text-4xl font-bold mb-12 text-left'>
-          Latest News from SD Pneumatics
-        </h1>
+        <div className='flex justify-between items-center mb-6'>
+          <h1 className='text-4xl font-bold text-left'>
+            Latest News from SD Pneumatics
+          </h1>
+          <button
+            onClick={() => (window.location.href = '/blogs')}
+            className='px-4 py-2 border border-[#5039bf] text-[#5039bf] rounded-lg hover:bg-[#3e27a5] hover:text-white transition-colors'>
+            View All
+          </button>
+        </div>
+        <p className='text-gray-500 mb-8'>
+          Stay informed about the latest developments, cutting-edge
+          technologies, and company news from SD Pneumatics.
+        </p>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {posts.map((post) => (
             <Link
@@ -138,14 +149,13 @@ export default function LatestPostsWidget() {
                 ref={(el) => (postsRef.current[post.id] = el)}
                 data-post-id={post.id}
                 className={`
-                  bg-white  overflow-hidden 
+                  bg-white overflow-hidden 
                   transform transition-all duration-500 ease-out
                   ${
                     visiblePosts.has(post.id.toString())
                       ? 'opacity-100 translate-y-0'
                       : 'opacity-0 translate-y-10'
                   }
-                  
                 `}>
                 <div className='relative w-full h-80 rounded-xl'>
                   <Image
@@ -161,6 +171,9 @@ export default function LatestPostsWidget() {
                   <h3 className='text-xl font-semibold mb-3 line-clamp-2'>
                     {post.title}
                   </h3>
+                  {/* <p className='text-sm text-gray-600 mb-3 line-clamp-3'>
+                    {post.excerpt}
+                  </p> */}
                   <div className='text-sm text-gray-400'>
                     <span>{post.authorName}</span>
                     <span className='mx-2'>•</span>

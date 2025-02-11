@@ -35,7 +35,7 @@ const HomeProducts = () => {
     {
       title: 'Spare Parts',
       description:
-        'Nitrogen generators deliver pure, dry nitrogen gas suitable for a wide range of industrial and commercial applications, ensuring efficiency and reliability.',
+        'We provide a comprehensive selection of high-quality spare parts to ensure the optimal performance and longevity of your equipment. Our reliable solutions help minimize downtime and maximize efficiency across various industrial applications.',
       link: '/products/nitrogen-generators',
     },
     {

@@ -1,14 +1,12 @@
 /** @format */
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, Pause } from 'lucide-react';
+import { Play } from 'lucide-react';
 import Image from 'next/image';
 import kobe from '@/../public/images/kobe.png';
 
 const HomeAbout = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-
   const heroStats = [
     {
       number: '500+',
@@ -42,41 +40,27 @@ const HomeAbout = () => {
     },
   };
 
-  const CustomVideo = () => {
-    return (
-      <div className='relative w-full rounded-2xl overflow-hidden bg-gray-900'>
-        <div className='aspect-w-16 aspect-h-12 relative'>
-          <div className='relative rounded-2xl overflow-hidden bg-gray-900 shadow-xl'>
-            <div className='relative' style={{ paddingTop: '56.25%' }}>
-              {' '}
-              {/* 16:9 Aspect Ratio */}
-              <iframe
-                className='absolute top-0 left-0 w-full h-full'
-                src='https://www.youtube.com/embed/zODMDux4Loc?autoplay=0&rel=0&showinfo=0'
-                title='SD Pneumatics Overview'
-                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+  const handlePlayVideo = () => {
+    window.open('https://www.youtube.com/watch?v=zODMDux4Loc', '_blank');
   };
 
   return (
-    <div className=' bg-gradient-to-br from-gray-100 to-gray-100'>
+    <div className='bg-gradient-to-br from-gray-100 to-gray-100'>
       <div className='max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8'>
         <div className='lg:grid lg:grid-cols-2 lg:gap-16 items-center'>
-          {/* Left Column - Video Section */}
+          {/* Left Column - Image with Play Button */}
           <motion.div
-            className='mb-12 lg:mb-0'
+            className='relative cursor-pointer rounded-2xl overflow-hidden shadow-lg'
             initial='hidden'
             whileInView='visible'
             viewport={{ once: true }}
             variants={fadeInUp}
-            transition={{ duration: 0.6 }}>
-            <CustomVideo />
+            transition={{ duration: 0.6 }}
+            onClick={handlePlayVideo}>
+            <Image src={kobe} alt='Play Video' className='w-full rounded-2xl' />
+            <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50'>
+              <Play className='w-16 h-16 text-white' />
+            </div>
           </motion.div>
 
           {/* Right Column - Content Section */}

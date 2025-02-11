@@ -188,7 +188,7 @@ const Navbar = () => {
             <div className='flex items-center'>
               <Link href='/'>
                 <span className='text-xl font-bold'>
-                  <Image src={logo} alt='Logo' width={120} height={120} />
+                  <Image src={logo} alt='Logo' width={160} height={160} />
                 </span>
               </Link>
             </div>

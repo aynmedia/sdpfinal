@@ -3,9 +3,11 @@
 import React from 'react';
 import Image from 'next/image';
 import Aboutbg from '../../../public/images/about/aboutbg.jpg';
+import BGabout from '../../../public/images/about/BGabout.jpg';
+import map from '../../../public/images/map.png';
+
 import Marquee from 'react-fast-marquee';
 import Clients from '../components/clients/clients';
-
 const Page = () => {
   return (
     <>
@@ -50,14 +52,21 @@ const Page = () => {
               <h2 className='text-3xl md:text-4xl font-bold text-[#0B0E2E]'>
                 Driving Innovation Forward
               </h2>
-            </div>
-            <div className='md:w-2/3'>
               <p className='text-md text-gray-600 leading-relaxed'>
                 To provide innovative, reliable, and efficient pneumatic
                 solutions that empower our clients to achieve their operational
                 goals while maintaining the highest standards of quality and
                 environmental responsibility.
               </p>
+            </div>
+            <div className='md:w-2/3'>
+              <Image
+                src={BGabout}
+                alt='sdp'
+                width={800}
+                height={800}
+                className=''
+              />
             </div>
           </div>
         </div>
@@ -154,7 +163,7 @@ const Page = () => {
       <Clients />
       {/* Global Presence - Full Width */}
       <div className='py-24 px-8 md:px-16 lg:px-24'>
-        <div className='max-w-screen-xl mx-auto'>
+        <div className='max-w-screen-xl mx-auto items-center justify-center flex flex-col'>
           <div className='flex flex-col md:flex-row md:items-center gap-16'>
             <div className='md:w-1/2'>
               <p className='text-[#5039bf] text-sm tracking-wider mb-2'>
@@ -165,7 +174,7 @@ const Page = () => {
               </h2>
             </div>
             <div className='md:w-1/2'>
-              <p className='text-xl text-gray-600 leading-relaxed'>
+              <p className='text-md text-gray-600 leading-relaxed'>
                 With a strong global presence, SD Pneumatics serves clients
                 across multiple continents. Our international network allows us
                 to provide localized support while leveraging our global
@@ -173,6 +182,7 @@ const Page = () => {
               </p>
             </div>
           </div>
+          {/* <Image src={map} alt='sdp' width={800} height={800} /> */}
         </div>
       </div>
     </>

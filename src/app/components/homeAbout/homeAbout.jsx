@@ -71,6 +71,9 @@ const HomeAbout = () => {
             viewport={{ once: true }}
             variants={staggerChildren}>
             <motion.div variants={fadeInUp} className='space-y-4'>
+              <p className='text-[#5039bf] text-sm tracking-wider mb-2 '>
+                Our Experiences
+              </p>
               <h2 className='text-3xl font-bold text-gray-900 tracking-tight'>
                 Discover the Power of Innovation
               </h2>

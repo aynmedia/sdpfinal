@@ -125,6 +125,9 @@ export default function LatestPostsWidget() {
   return (
     <div className='bg-white text-primary px-4 py-16'>
       <div className='max-w-7xl mx-auto'>
+        <p className='text-[#5039bf] text-sm tracking-wider mb-2'>
+          Blogs and News
+        </p>
         <div className='flex justify-between items-center mb-6'>
           <h1 className='text-4xl font-bold text-left'>
             Latest News from SD Pneumatics

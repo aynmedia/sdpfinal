@@ -256,9 +256,10 @@ function Services() {
 
   return (
     <div className=' bg-white mx-auto max-w-7xl'>
-      <h1 className='text-4xl font-bold mb-2  md:mt-24 '>
-        Our Comprehensive Services
-      </h1>
+      <p className='text-[#5039bf] text-sm tracking-wider mb-2 md:mt-24'>
+        Services
+      </p>
+      <h1 className='text-4xl font-bold mb-2'>Our Comprehensive Services</h1>
       <p className='mb-12 text-black/80'>
         we offer a wide range of expert services designed to ensure the optimal
         performance, longevity, and reliability of your equipment. From initial

@@ -59,6 +59,7 @@ const HomeProducts = () => {
       <div className='relative z-10 max-w-7xl mx-auto px-6 lg:px-8'>
         {/* Heading Section */}
         <div className='text-center mb-12'>
+          <p className='text-white text-sm tracking-wider mb-2 '>What we do?</p>
           <h1 className='text-4xl font-bold text-white'>
             Discover Industrial Excellence
           </h1>

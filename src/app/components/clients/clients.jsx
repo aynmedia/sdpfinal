@@ -68,6 +68,9 @@ const Clients = () => {
   return (
     <div className='text-primary py-12'>
       <div className='max-w-7xl mx-auto text-center my-6'>
+        <p className='text-[#5039bf] text-sm tracking-wider mb-2'>
+          OUR CLIENTS
+        </p>
         <h1 className='text-3xl font-semibold mt-2'>
           Proudly Trusted by Top Companies Worldwide
         </h1>

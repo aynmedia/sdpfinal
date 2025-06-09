@@ -15,8 +15,10 @@ import vlx from '@/../public/images/oxygen/vlx.png';
 import water from '@/../public/images/oxygen/water.webp';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import Button from '@/app/components/ui/button/button';
-import { Download } from 'lucide-react';
+import { useState, useEffect } from 'react';
+
+import GetQuoteModal from './../GetQuoteModal';
+import { ArrowDownToLine } from 'lucide-react';
 
 const productData = [
   {
@@ -108,6 +110,8 @@ const productData = [
 ];
 
 const Products = () => {
+  const [showQuoteModal, setShowQuoteModal] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   return (
     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12'>
       <ul className='space-y-2'>
@@ -136,15 +140,25 @@ const Products = () => {
                 <p className='text-gray-600 leading-relaxed'>
                   {product.description}
                 </p>
-                <div className='flex flex-row gap-3 text-primary hover:text-green-600 transition-colors duration-200 cursor-pointer'>
-                  <Download className='h-6 w-6' />
-                  <p>Get Quote</p>
+                <div
+                  className='text-gray-600 text-sm mb-2 flex flex-row gap-2 hover:text-green-600 transition-colors cursor-pointer'
+                  onClick={() => {
+                    setSelectedProduct(product);
+                    setShowQuoteModal(true);
+                  }}>
+                  <ArrowDownToLine className='h-4 w-4' />
+                  <span className='font-bold'>Get Quote</span>
                 </div>
               </div>
             </div>
           </motion.li>
         ))}
       </ul>
+      <GetQuoteModal
+        isOpen={showQuoteModal}
+        onClose={() => setShowQuoteModal(false)}
+        product={selectedProduct}
+      />
     </div>
   );
 };

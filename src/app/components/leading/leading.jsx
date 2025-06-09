@@ -102,7 +102,7 @@ export function Leading() {
             <Button
               color='white'
               text='Explore our products'
-              link='https://www.google.com'
+              href='/products/anesta'
             />
           </motion.div>
         </motion.div>

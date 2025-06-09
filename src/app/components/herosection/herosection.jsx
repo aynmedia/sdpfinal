@@ -54,11 +54,7 @@ const Herosection = () => {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.9 }}>
-            <Button
-              color='white'
-              text='Learn More'
-              link='https://www.google.com'
-            />
+            <Button color='white' text='Learn More' href='/about' />
           </motion.div>
 
           {/* <div className='flex flex-col gap-2'>

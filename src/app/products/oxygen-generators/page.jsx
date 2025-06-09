@@ -12,6 +12,30 @@ import ApplicationsSection from './application';
 import Products from './products';
 import family from '@/../public/images/family.jpg';
 import NavigationBar from '@/app/components/explore/explore';
+
+export const metadata = {
+  title: 'Oxygen Generators | On-Site Industrial Oxygen Solutions',
+  description:
+    'State-of-the-art oxygen generators for industrial and medical use. Reliable, eco-friendly, and cost-effective on-site oxygen generation by SD Pneumatics.',
+  openGraph: {
+    title: 'Oxygen Generators | On-Site Industrial Oxygen Solutions',
+    description:
+      'State-of-the-art oxygen generators for industrial and medical use. Reliable, eco-friendly, and cost-effective on-site oxygen generation by SD Pneumatics.',
+    url: 'https://yourdomain.com/products/oxygen-generators',
+    siteName: 'SD Pneumatics',
+    images: [
+      {
+        url: '/images/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Oxygen Generators',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+};
+
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -89,11 +113,7 @@ const Page = () => {
                 for precision-driven results.
               </motion.p>
               <motion.div variants={fadeIn}>
-                <Button
-                  color='white'
-                  text='Contact Us'
-                  link='https://www.google.com'
-                />
+                <Button color='white' text='Contact Us' href='/contact' />
               </motion.div>
             </motion.div>
 

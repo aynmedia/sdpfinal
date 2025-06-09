@@ -88,9 +88,11 @@ const HomeProducts = () => {
                   <p className='text-gray-600 mt-3 text-sm leading-relaxed group-hover:text-gray-800 transition-colors duration-300'>
                     {product.description}
                   </p>
+                  {/* <a href='/products/anesta/'> */}
                   <p className='text-[#001233] mt-4 inline-block font-bold hover:underline'>
                     Explore More →
                   </p>
+                  {/* </a> */}
                 </div>
               </Link>
               {/* Hover Accent */}

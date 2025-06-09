@@ -11,6 +11,29 @@ import anesta from '@/../public/images/anesta.png';
 import motor from '@/../public/images/bgred.jpg';
 import anestalogo from '@/../public/images/anestlogo.svg';
 
+export const metadata = {
+  title: 'Anest Iwata | Air Compressors & Coating Equipment',
+  description:
+    "Discover Anest Iwata's innovative air compressors, vacuum pumps, and coating equipment. Energy-efficient, reliable, and sustainable solutions for every industry.",
+  openGraph: {
+    title: 'Anest Iwata | Air Compressors & Coating Equipment',
+    description:
+      "Discover Anest Iwata's innovative air compressors, vacuum pumps, and coating equipment. Energy-efficient, reliable, and sustainable solutions for every industry.",
+    url: 'https://yourdomain.com/products/anesta',
+    siteName: 'SD Pneumatics',
+    images: [
+      {
+        url: '/images/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Anest Iwata',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+};
+
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -123,11 +146,7 @@ const Anesta = () => {
                 for precision-driven results.
               </motion.p>
               <motion.div variants={fadeIn}>
-                <Button
-                  color='white'
-                  text='Contact Us'
-                  link='https://www.google.com'
-                />
+                <Button color='white' text='Contact Us' href='/contact' />
               </motion.div>
             </motion.div>
           </motion.div>
@@ -191,7 +210,7 @@ const Anesta = () => {
                   integrates advanced engineering and eco-friendly technologies
                   to ensure reliability, durability, and efficiency. Trusted
                   worldwide, its solutions enhance productivity and support
-                  critical applications across industries.
+                  critical applications across industries.
                 </p>
               </div>
               <div className='flex justify-center items-center py-4'>

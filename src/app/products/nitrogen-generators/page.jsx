@@ -83,7 +83,7 @@ const Page = () => {
                 every system.
               </motion.p>
               <motion.div variants={fadeIn}>
-                <Button color='white' text='Contact Us' link='/contact-us' />
+                <Button color='white' text='Contact Us' href='/contact' />
               </motion.div>
             </motion.div>
 

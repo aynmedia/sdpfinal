@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import map from '@/../public/images/map.png';
 import { Facebook, Instagram, Linkedin, X } from 'lucide-react';
@@ -63,15 +63,26 @@ const ContactSection = () => {
 
     if (validateForm()) {
       try {
-        // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-        setSubmitStatus('success');
-        setFormData({
-          fullName: '',
-          email: '',
-          subject: '',
-          message: '',
+        const response = await fetch('/footercontactmail.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
         });
+
+        const result = await response.json();
+        if (result.success) {
+          setSubmitStatus('success');
+          setFormData({
+            fullName: '',
+            email: '',
+            subject: '',
+            message: '',
+          });
+        } else {
+          setSubmitStatus('error');
+        }
       } catch (error) {
         setSubmitStatus('error');
       }
@@ -79,6 +90,16 @@ const ContactSection = () => {
 
     setIsSubmitting(false);
   };
+
+  // Auto-hide popup after 5 seconds
+  useEffect(() => {
+    if (submitStatus) {
+      const timer = setTimeout(() => {
+        setSubmitStatus('');
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus]);
 
   return (
     <div className='relative min-h-screen text-white py-16'>
@@ -93,6 +114,7 @@ const ContactSection = () => {
           className='opacity-10'
         />
       </div>
+
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12'>
           {/* Left Column */}
@@ -117,7 +139,7 @@ const ContactSection = () => {
                   Bengaluru, Karnataka 560010
                 </p>
                 <p className='text-gray-400'>
-                  sdpn2014@gmail.com
+                  careblr@sdpneumatics.in
                   <br />
                   9986523331 | 9900726662
                 </p>
@@ -126,12 +148,12 @@ const ContactSection = () => {
               <div>
                 <h2 className='text-xl font-semibold mb-2'>Branch Office</h2>
                 <p className='text-gray-400'>
-                  Sumuka Arcade Neae Geeta Seva <br />
+                  Sumuka Arcade Near Geeta Seva <br />
                   Asharama Bellary Road, Hospet <br />
                   Karnataka - 583201
                 </p>
                 <p className='text-gray-400'>
-                  sdpn2014@gmail.com
+                  carehpt@sdpneumatics.in
                   <br />
                   9986523331 | 9980673338
                 </p>
@@ -139,7 +161,6 @@ const ContactSection = () => {
 
               <div>
                 <h2 className='text-xl font-semibold mb-2'>GSTIN</h2>
-
                 <p>29AELPG4572Q1ZO</p>
               </div>
 
@@ -152,8 +173,8 @@ const ContactSection = () => {
                         key={social}
                         href={`https://${social}.com`}
                         className='w-10 h-10 border border-gray-700 hover:border-green-500 
-                               flex items-center justify-center rounded-sm 
-                               transition-colors duration-300'>
+                          flex items-center justify-center rounded-sm 
+                          transition-colors duration-300'>
                         {social === 'twitter' && <X size={20} />}
                         {social === 'facebook' && <Facebook size={20} />}
                         {social === 'linkedin' && <Linkedin size={20} />}
@@ -256,21 +277,24 @@ const ContactSection = () => {
                          font-medium disabled:opacity-50 disabled:cursor-not-allowed'>
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
-
-              {submitStatus === 'success' && (
-                <p className='text-green-500 text-center'>
-                  Message sent successfully!
-                </p>
-              )}
-              {submitStatus === 'error' && (
-                <p className='text-red-500 text-center'>
-                  Failed to send message. Please try again.
-                </p>
-              )}
             </form>
           </div>
         </div>
       </div>
+
+      {/* Popup Notification */}
+      {submitStatus && (
+        <div
+          className={`fixed bottom-4 right-4 px-6 py-4 rounded-md shadow-lg z-50 transition-opacity duration-300 ${
+            submitStatus === 'success'
+              ? 'bg-green-600 text-white'
+              : 'bg-red-600 text-white'
+          }`}>
+          {submitStatus === 'success'
+            ? 'Message sent successfully!'
+            : 'Failed to send message. Please try again.'}
+        </div>
+      )}
     </div>
   );
 };

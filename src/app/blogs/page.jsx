@@ -6,6 +6,29 @@ import blogs from '@/../public/images/blogs.jpg';
 import { stripHtml } from 'string-strip-html';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'SD Pneumatics Blog | Industry News & Updates',
+  description:
+    'Read the latest news, updates, and insights from SD Pneumatics. Stay informed about industrial air solutions, technology, and company news.',
+  openGraph: {
+    title: 'SD Pneumatics Blog | Industry News & Updates',
+    description:
+      'Read the latest news, updates, and insights from SD Pneumatics. Stay informed about industrial air solutions, technology, and company news.',
+    url: 'https://yourdomain.com/blogs',
+    siteName: 'SD Pneumatics',
+    images: [
+      {
+        url: '/images/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'SD Pneumatics Blog',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+};
+
 async function getAllPosts() {
   try {
     const res = await fetch(

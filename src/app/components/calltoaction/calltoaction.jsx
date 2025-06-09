@@ -17,7 +17,13 @@ const CardContent = ({ title, description, delay }) => (
     transition={{ duration: 0.5, delay }}>
     <h1 className='text-xl md:text-2xl font-bold capitalize'>{title}</h1>
     <p className='text-sm md:text-md'>{description}</p>
-    <Button color='black' text='Request' link='https://www.google.com' />
+    <Button
+      href='/contact'
+      text='Request Now'
+      bgColor='bg-transparent'
+      hoverBgColor='hover:bg-blue-50'
+      textColor='text-blue-500'
+    />
   </motion.div>
 );
 

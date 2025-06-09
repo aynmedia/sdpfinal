@@ -13,6 +13,29 @@ import Awards from './components/awards/awards';
 import Clients from './components/clients/clients';
 import MarqueeText from './components/marquee/marquee';
 
+export const metadata = {
+  title: 'SD Pneumatics | Industrial Air Solutions & Compressors',
+  description:
+    'SD Pneumatics is a leading supplier of air compressors, gas generators, and pneumatic solutions for industries across India. Discover our innovative, energy-efficient products and services.',
+  openGraph: {
+    title: 'SD Pneumatics | Industrial Air Solutions & Compressors',
+    description:
+      'SD Pneumatics is a leading supplier of air compressors, gas generators, and pneumatic solutions for industries across India. Discover our innovative, energy-efficient products and services.',
+    url: 'https://yourdomain.com/',
+    siteName: 'SD Pneumatics',
+    images: [
+      {
+        url: '/images/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'SD Pneumatics',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+};
+
 export default function Home() {
   return (
     <>

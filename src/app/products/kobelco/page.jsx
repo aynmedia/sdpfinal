@@ -13,6 +13,29 @@ import kobelcologo from '@/../public/images/kobelco.svg';
 import kobelcoscrew from '@/../public/images/kobelcoscrew.jpg';
 import sliderbg2 from '@/../public/images/sliderbg2.jpg';
 
+export const metadata = {
+  title: 'Kobelco Compressors | Advanced Air Compression Solutions',
+  description:
+    "Explore Kobelco's advanced compressor solutions for diverse industries. Energy-efficient, eco-friendly, and precision-driven air compression technology.",
+  openGraph: {
+    title: 'Kobelco Compressors | Advanced Air Compression Solutions',
+    description:
+      "Explore Kobelco's advanced compressor solutions for diverse industries. Energy-efficient, eco-friendly, and precision-driven air compression technology.",
+    url: 'https://yourdomain.com/products/kobelco',
+    siteName: 'SD Pneumatics',
+    images: [
+      {
+        url: '/images/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Kobelco Compressors',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+};
+
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -119,11 +142,7 @@ const Kobelco = () => {
                 across industries. Trust Kobelco for precision-driven results.
               </motion.p>
               <motion.div variants={fadeIn}>
-                <Button
-                  color='white'
-                  text='Contact Us'
-                  link='https://www.google.com'
-                />
+                <Button color='white' text='Contact Us' href='/contact' />
               </motion.div>
             </motion.div>
           </motion.div>

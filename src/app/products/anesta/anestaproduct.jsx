@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import GetQuoteModal from './../GetQuoteModal';
 
 const AnestIwataProducts = () => {
   const [posts, setPosts] = useState([]);
@@ -21,6 +22,9 @@ const AnestIwataProducts = () => {
   const [sortBy, setSortBy] = useState('date-asc');
   const productsPerPage = 100;
   const ANEST_IWATA_CATEGORY_ID = 1;
+
+  const [showQuoteModal, setShowQuoteModal] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   // Fetch Categories
   useEffect(() => {
@@ -243,8 +247,13 @@ const AnestIwataProducts = () => {
                         )}
                       />
                     )}
-                  <div className='text-gray-600 text-sm mb-2 flex flex-row gap-2 hover:text-green-600 transition-colors cursor-pointer'>
-                    <ArrowDownToLine className='h-6 w-6' />
+                  <div
+                    className='text-gray-600 text-sm mb-2 flex flex-row gap-2 hover:text-green-600 transition-colors cursor-pointer'
+                    onClick={() => {
+                      setSelectedProduct(post);
+                      setShowQuoteModal(true);
+                    }}>
+                    <ArrowDownToLine className='h-4 w-4' />
                     <span className='font-bold'>Get Quote</span>
                   </div>
                 </div>
@@ -274,6 +283,11 @@ const AnestIwataProducts = () => {
           )}
         </>
       )}
+      <GetQuoteModal
+        isOpen={showQuoteModal}
+        onClose={() => setShowQuoteModal(false)}
+        product={selectedProduct}
+      />
     </div>
   );
 };

@@ -8,6 +8,30 @@ import map from '../../../public/images/map.png';
 
 import Marquee from 'react-fast-marquee';
 import Clients from '../components/clients/clients';
+
+export const metadata = {
+  title: 'About SD Pneumatics | Our Story & Values',
+  description:
+    'Learn about SD Pneumatics, our mission, values, and commitment to quality, innovation, and sustainability in industrial pneumatic solutions.',
+  openGraph: {
+    title: 'About SD Pneumatics | Our Story & Values',
+    description:
+      'Learn about SD Pneumatics, our mission, values, and commitment to quality, innovation, and sustainability in industrial pneumatic solutions.',
+    url: 'https://yourdomain.com/about',
+    siteName: 'SD Pneumatics',
+    images: [
+      {
+        url: '/images/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'About SD Pneumatics',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+};
+
 const Page = () => {
   return (
     <>
